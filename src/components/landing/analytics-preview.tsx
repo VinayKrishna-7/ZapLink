@@ -25,24 +25,21 @@ export function LandingAnalyticsPreview() {
   }, []);
 
   return (
-    <section id="analytics" className="py-16 md:py-24 bg-muted/30 border-y border-border/60">
-      <div className="container mx-auto max-w-6xl px-4">
-        <div className="text-center max-w-xl mx-auto mb-12">
-          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
-            Analytics
-          </p>
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
-            Detailed analytics for every link
+    <section id="analytics" className="py-12 md:py-16 bg-muted/20 border-y border-border/50">
+      <div className="container mx-auto max-w-5xl px-4">
+        <div className="text-center max-w-lg mx-auto mb-8">
+          <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
+            Analytics Overview
           </h2>
-          <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
-            Monitor click performance, top referrers, device distributions, and geographic locations in real time.
+          <p className="mt-1.5 text-xs sm:text-sm text-muted-foreground">
+            Live visitor stats, click timelines, and audience breakdowns.
           </p>
         </div>
 
         {/* Dashboard Preview Shell */}
-        <div className="rounded-2xl border border-border bg-card p-4 sm:p-6 shadow-sm space-y-5">
+        <div className="rounded-xl border border-border bg-card p-4 sm:p-5 shadow-sm space-y-4">
           {/* KPI Row */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             <KpiCard
               title="Total Clicks"
               value={128492}
@@ -77,8 +74,8 @@ export function LandingAnalyticsPreview() {
           {/* Clicks Chart */}
           <ClicksChart data={sampleTimeSeries} />
 
-          {/* Bottom Grid: Devices, Browsers, Geo */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Bottom Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             <DeviceChart
               data={[
                 { name: "Desktop", value: 65, percentage: 65 },
