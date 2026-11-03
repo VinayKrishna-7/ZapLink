@@ -1,6 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
-import { Zap, Github } from "lucide-react";
+import { Zap } from "lucide-react";
 
 export function LandingFooter() {
   return (
@@ -11,7 +11,7 @@ export function LandingFooter() {
             <Zap className="h-3 w-3 fill-current" />
           </div>
           <span>
-            ZapLink &bull; Built by <strong className="font-semibold text-foreground">Vinay Krishna</strong> &bull; MIT License
+            ZapLink &bull; Fast URL Shortener & Analytics
           </span>
         </div>
 
@@ -22,15 +22,6 @@ export function LandingFooter() {
           <Link href="/report" className="hover:text-foreground transition-colors">
             Report Abuse
           </Link>
-          <a
-            href="https://github.com/VinayKrishna-7/ZapLink"
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-1 hover:text-foreground transition-colors"
-          >
-            <Github className="h-3.5 w-3.5" />
-            <span>GitHub</span>
-          </a>
         </div>
       </div>
     </footer>

@@ -16,7 +16,7 @@ export function LandingPricing() {
         "Full data ownership",
       ],
       cta: "GitHub Repo",
-      href: "https://github.com/VinayKrishna-7/ZapLink",
+      href: "/sign-up",
       isExternal: true,
       highlighted: false,
     },

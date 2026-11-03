@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Zap, ArrowRight, Github } from "lucide-react";
+import { Zap, ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 import { ThemeToggle } from "../shared/theme-toggle";
 import { useSession } from "next-auth/react";
@@ -36,16 +36,6 @@ export function LandingNavbar() {
 
         {/* Right Actions */}
         <div className="flex items-center gap-2.5">
-          <a
-            href="https://github.com/VinayKrishna-7/ZapLink"
-            target="_blank"
-            rel="noreferrer"
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-border/80 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
-            aria-label="GitHub Repository"
-          >
-            <Github className="h-4 w-4" />
-          </a>
-
           <ThemeToggle />
 
           {session ? (
