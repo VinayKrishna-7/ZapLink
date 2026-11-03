@@ -13,11 +13,10 @@ import {
   Zap,
   ChevronLeft,
   ChevronRight,
-  LogOut,
   Sparkles,
   X,
 } from "lucide-react";
-import { useSession, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import { cn } from "@/lib/utils";
 
 interface SidebarProps {
@@ -163,36 +162,6 @@ export function Sidebar({
             </Link>
           </div>
         )}
-      </div>
-
-      {/* User Profile Footer */}
-      <div className="p-3 border-t border-border/80 shrink-0">
-        <div className="flex items-center justify-between rounded-xl bg-muted/50 p-2">
-          <div className="flex items-center gap-2.5 overflow-hidden">
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary font-bold text-xs uppercase">
-              {session?.user?.name?.[0] || session?.user?.email?.[0] || "U"}
-            </div>
-            {(!collapsed || isMobile) && (
-              <div className="overflow-hidden">
-                <p className="truncate text-xs font-bold text-foreground">
-                  {session?.user?.name || "User"}
-                </p>
-                <p className="truncate text-[10px] text-muted-foreground">
-                  {session?.user?.email}
-                </p>
-              </div>
-            )}
-          </div>
-          {(!collapsed || isMobile) && (
-            <button
-              onClick={() => signOut({ callbackUrl: "/" })}
-              className="rounded-lg p-1.5 text-muted-foreground hover:bg-rose-500/15 hover:text-rose-500 transition-colors"
-              title="Sign Out"
-            >
-              <LogOut className="h-4 w-4" />
-            </button>
-          )}
-        </div>
       </div>
     </aside>
   );
