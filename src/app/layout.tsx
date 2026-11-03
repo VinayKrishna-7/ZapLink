@@ -17,14 +17,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: {
-    default: "⚡ ZapLink — Modern URL Shortener & Analytics",
-    template: "%s | ZapLink",
-  },
+  title: "ZapLink",
   description:
     "Fast, secure URL shortener SaaS with real-time analytics, instant QR codes, and audience insights.",
   icons: {
-    icon: "/icon.svg",
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
     shortcut: "/icon.svg",
     apple: "/icon.svg",
   },
