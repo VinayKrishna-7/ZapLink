@@ -2,6 +2,10 @@
 
 ZapLink is an open-source URL shortener that makes it simple to turn long URLs into clean, memorable links. Easily create custom slugs, protect links with passwords or expiration dates, generate instant QR codes, and track visitor traffic in real time with built-in analytics.
 
+[Live Demo](https://zaplink-g4ui.onrender.com)
+
+> Note: The demo is hosted on Render's free tier. If the service has been idle, the server automatically sleeps to conserve resources—please allow 30–50 seconds for the initial wake-up on your first visit. Once loaded, all features run normally.
+
 ## Features
 
 - **Custom Links** — Custom slugs, password protection, and expiration dates.
@@ -13,7 +17,7 @@ ZapLink is an open-source URL shortener that makes it simple to turn long URLs i
 ## Tech Stack
 
 - **Framework**: Next.js 15, React 19
-- **Database**: SQLite / PostgreSQL via Prisma
+- **Database**: SQLite / PostgreSQL via Prisma, Redis for caching
 - **Styling**: Tailwind CSS
 - **Auth**: NextAuth.js
 
@@ -46,8 +50,10 @@ Open [http://localhost:3000](http://localhost:3000) in your browser and register
 | `NEXT_PUBLIC_APP_URL` | Base application URL | `http://localhost:3000` |
 | `NEXTAUTH_SECRET` | Secret key for sessions | *(generate in .env)* |
 | `DATABASE_URL` | Database connection string | `file:./dev.db` |
+| `REDIS_URL` | Redis connection for caching (optional) | `redis://localhost:6379` |
 | `ADMIN_EMAIL` | Designated admin account (optional) | `""` |
 
 ## License
 
 MIT
+
