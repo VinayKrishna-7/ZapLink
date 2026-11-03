@@ -4,62 +4,62 @@
 
 @layer base {
   :root {
-    --background: 348 40% 97%; /* #FAF5F6 Alabaster Rose */
-    --foreground: 340 37% 8%; /* #1C0D12 Bordeaux Black */
-    --card: 348 50% 99%; /* #FFF9FA */
-    --card-foreground: 340 37% 8%;
-    --popover: 348 50% 99%;
-    --popover-foreground: 340 37% 8%;
-    --primary: 347 77% 50%; /* #E11D48 Deep Ruby */
-    --primary-foreground: 356 100% 97%; /* #FFF1F2 Rose Silk */
-    --primary-hover: 345 82% 41%; /* #BE123C */
-    --secondary: 345 30% 92%; /* #F5E8EB */
-    --secondary-foreground: 340 37% 8%;
-    --muted: 345 30% 92%;
-    --muted-foreground: 340 25% 28%; /* High contrast, easy to read */
-    --accent: 347 77% 50%; /* #E11D48 */
-    --accent-foreground: 356 100% 97%;
+    --background: 220 12% 90%; /* #E3E5E9 Refined Architectural Cement Grey */
+    --foreground: 220 25% 10%; /* #12161F Deep, sharp charcoal text */
+    --card: 0 0% 100%; /* #FFFFFF Pure white card for crisp contrast */
+    --card-foreground: 220 25% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+    --primary: 220 25% 10%; /* #12161F Solid black/charcoal button */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF Crisp white text */
+    --primary-hover: 220 15% 20%; /* #272E3D */
+    --secondary: 220 12% 84%; /* #D2D5DC Cement secondary */
+    --secondary-foreground: 220 25% 10%;
+    --muted: 220 12% 84%;
+    --muted-foreground: 220 10% 36%; /* #545B69 High contrast readable text */
+    --accent: 220 12% 84%;
+    --accent-foreground: 220 25% 10%;
     --destructive: 0 72% 51%;
-    --destructive-foreground: 356 100% 97%;
-    --border: 345 30% 86%; /* #EED7DC */
-    --input: 345 30% 86%;
-    --ring: 347 77% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 12% 78%; /* #C1C5CE Clean cement border */
+    --input: 220 12% 78%;
+    --ring: 220 25% 10%;
     --radius: 0.5rem;
 
-    --chart-1: 347 77% 50%; /* #E11D48 */
-    --chart-2: 345 82% 41%; /* #BE123C */
-    --chart-3: 340 37% 8%; /* #1C0D12 */
-    --chart-4: 342 12% 42%; /* #785E67 */
-    --chart-5: 345 30% 92%;
+    --chart-1: 220 25% 10%;
+    --chart-2: 220 10% 36%;
+    --chart-3: 220 12% 60%;
+    --chart-4: 220 12% 78%;
+    --chart-5: 220 12% 84%;
   }
 
   .dark {
     --background: 0 0% 0%; /* Full high dark / Pure pitch black #000000 */
-    --foreground: 356 100% 97%; /* #FFF1F2 Rose Silk text */
-    --card: 0 0% 4%; /* #0A0A0A Full dark obsidian */
-    --card-foreground: 356 100% 97%;
-    --popover: 0 0% 4%;
-    --popover-foreground: 356 100% 97%;
-    --primary: 347 77% 50%; /* #E11D48 Deep Ruby button */
-    --primary-foreground: 356 100% 97%;
-    --primary-hover: 345 82% 44%; /* #C7143F */
-    --secondary: 0 0% 8%; /* #141414 */
-    --secondary-foreground: 356 100% 97%;
-    --muted: 0 0% 8%;
-    --muted-foreground: 0 0% 65%; /* Crisp, clear readable text */
-    --accent: 347 77% 50%; /* #E11D48 Deep Ruby */
-    --accent-foreground: 356 100% 97%;
+    --foreground: 0 0% 98%; /* #FAFAFA Crisp pure white text */
+    --card: 0 0% 5%; /* #0D0D0D Deep obsidian */
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%; /* #FAFAFA Solid crisp white button */
+    --primary-foreground: 0 0% 7%; /* #121212 Solid black text */
+    --primary-hover: 0 0% 88%; /* #E0E0E0 */
+    --secondary: 0 0% 10%; /* #1A1A1A */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 68%; /* #ADADAD High readability clear neutral text */
+    --accent: 0 0% 12%; /* #1F1F1F */
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 72% 51%;
-    --destructive-foreground: 356 100% 97%;
-    --border: 0 0% 13%; /* #212121 Full dark border */
-    --input: 0 0% 13%;
-    --ring: 347 77% 50%; /* #E11D48 */
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14%; /* #242424 Full dark border */
+    --input: 0 0% 14%;
+    --ring: 0 0% 98%;
 
-    --chart-1: 347 77% 50%; /* #E11D48 Deep Ruby */
-    --chart-2: 345 82% 41%; /* #BE123C Bordeaux */
-    --chart-3: 356 100% 97%; /* #FFF1F2 Rose Silk */
-    --chart-4: 0 0% 65%;
-    --chart-5: 0 0% 12%;
+    --chart-1: 0 0% 98%;
+    --chart-2: 0 0% 75%;
+    --chart-3: 0 0% 50%;
+    --chart-4: 0 0% 30%;
+    --chart-5: 0 0% 14%;
   }
 }
 

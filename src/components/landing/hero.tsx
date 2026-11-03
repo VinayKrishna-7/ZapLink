@@ -52,10 +52,10 @@ export function LandingHero() {
 
         {/* Value Props Grid */}
         <div className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 text-left">
-          <div className="rounded-xl border border-border bg-card p-4 sm:p-5 shadow-sm transition-colors hover:border-primary/40 flex flex-col justify-between">
+          <div className="rounded-xl border border-border bg-card p-4 sm:p-5 shadow-sm transition-colors hover:border-foreground/30 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-2.5 text-foreground font-semibold text-sm sm:text-base mb-2">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-foreground/10 text-foreground">
                   <ShieldCheck className="h-4 w-4" />
                 </div>
                 <span>Custom Slugs & Expiry</span>
@@ -66,10 +66,10 @@ export function LandingHero() {
             </div>
           </div>
 
-          <div className="rounded-xl border border-border bg-card p-4 sm:p-5 shadow-sm transition-colors hover:border-primary/40 flex flex-col justify-between">
+          <div className="rounded-xl border border-border bg-card p-4 sm:p-5 shadow-sm transition-colors hover:border-foreground/30 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-2.5 text-foreground font-semibold text-sm sm:text-base mb-2">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-foreground/10 text-foreground">
                   <BarChart3 className="h-4 w-4" />
                 </div>
                 <span>Real-Time Analytics</span>
@@ -80,10 +80,10 @@ export function LandingHero() {
             </div>
           </div>
 
-          <div className="rounded-xl border border-border bg-card p-4 sm:p-5 shadow-sm transition-colors hover:border-primary/40 flex flex-col justify-between">
+          <div className="rounded-xl border border-border bg-card p-4 sm:p-5 shadow-sm transition-colors hover:border-foreground/30 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-2.5 text-foreground font-semibold text-sm sm:text-base mb-2">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-foreground/10 text-foreground">
                   <QrCode className="h-4 w-4" />
                 </div>
                 <span>Instant QR Codes</span>

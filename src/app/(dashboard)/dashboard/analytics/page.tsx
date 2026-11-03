@@ -44,7 +44,7 @@ export default function GlobalAnalyticsPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/60 pb-3">
         <div>
           <div className="flex items-center gap-2">
-            <BarChart3 className="h-5 w-5 text-primary" />
+            <BarChart3 className="h-5 w-5 text-foreground" />
             <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
               Analytics
             </h1>
@@ -62,7 +62,7 @@ export default function GlobalAnalyticsPage() {
               onClick={() => setTimeRange(r)}
               className={`rounded-lg px-3 py-1.5 font-semibold transition-all ${
                 timeRange === r
-                  ? "bg-primary text-primary-foreground shadow-sm"
+                  ? "bg-foreground text-background shadow-sm"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >

@@ -289,7 +289,7 @@ export function LinkTable({
                           {link.tags.map((t) => (
                             <span
                               key={t.id}
-                              className="rounded px-1.5 py-0.5 text-[9px] font-medium bg-primary/10 text-primary border border-primary/20"
+                              className="rounded px-1.5 py-0.5 text-[9px] font-medium bg-muted text-foreground border border-border"
                             >
                               {t.name}
                             </span>

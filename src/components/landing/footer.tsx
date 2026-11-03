@@ -7,7 +7,7 @@ export function LandingFooter() {
     <footer className="border-t border-border/60 bg-background py-5 text-sm text-foreground/80 font-medium mt-auto">
       <div className="container mx-auto max-w-5xl px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2">
-          <div className="flex h-5 w-5 items-center justify-center rounded bg-primary text-primary-foreground">
+          <div className="flex h-5 w-5 items-center justify-center rounded bg-foreground text-background">
             <Zap className="h-3 w-3 fill-current" />
           </div>
           <span>

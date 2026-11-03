@@ -32,7 +32,7 @@ export default function RecentLinksPage() {
         </div>
 
         <Link href="/dashboard/links">
-          <Button variant="glow" size="sm" className="gap-1.5 text-xs font-semibold h-9">
+          <Button variant="default" size="sm" className="gap-1.5 text-xs font-semibold h-9 shadow-sm">
             <Sparkles className="h-3.5 w-3.5" />
             <span>Manage All Links</span>
           </Button>
@@ -50,7 +50,7 @@ export default function RecentLinksPage() {
 
         {isLoading ? (
           <div className="flex h-48 items-center justify-center">
-            <div className="h-7 w-7 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+            <div className="h-7 w-7 animate-spin rounded-full border-2 border-foreground border-t-transparent" />
           </div>
         ) : links.length === 0 ? (
           <div className="py-12 text-center text-xs text-muted-foreground">
@@ -93,7 +93,7 @@ export default function RecentLinksPage() {
 
                   <div className="flex items-center gap-4 shrink-0">
                     <div className="flex items-center gap-1.5 font-mono text-foreground text-xs font-bold bg-muted/60 px-2.5 py-1 rounded-lg">
-                      <MousePointerClick className="h-3.5 w-3.5 text-primary" />
+                      <MousePointerClick className="h-3.5 w-3.5 text-foreground" />
                       <span>{formatNumber(link.clickCount)} clicks</span>
                     </div>
 

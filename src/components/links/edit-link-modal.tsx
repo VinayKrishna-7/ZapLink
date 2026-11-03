@@ -96,7 +96,7 @@ export function EditLinkModal({
     <Dialog open={open} onOpenChange={onOpenChange} maxWidth="max-w-lg">
       <DialogHeader>
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-foreground/10 text-foreground border border-border">
             <Edit2 className="h-5 w-5" />
           </div>
           <div>

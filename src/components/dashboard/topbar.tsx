@@ -50,7 +50,7 @@ export function Topbar({
 
         {/* Avatar Profile */}
         <div className="flex items-center gap-2 pl-2 border-l border-border/80">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/15 text-primary font-bold text-xs ring-2 ring-primary/20">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-foreground/10 text-foreground font-bold text-xs border border-border">
             {session?.user?.name?.[0] || session?.user?.email?.[0] || <UserIcon className="h-4 w-4" />}
           </div>
         </div>

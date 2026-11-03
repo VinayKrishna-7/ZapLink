@@ -16,7 +16,7 @@ export default function LinksPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/60 pb-3">
         <div>
           <div className="flex items-center gap-2">
-            <Link2 className="h-5 w-5 text-primary" />
+            <Link2 className="h-5 w-5 text-foreground" />
             <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight text-foreground">
               Link Management
             </h1>
@@ -27,9 +27,9 @@ export default function LinksPage() {
         </div>
 
         <Button
-          variant="glow"
+          variant="default"
           onClick={() => setCreateModalOpen(true)}
-          className="gap-1.5 self-start sm:self-auto font-bold text-xs shadow-md shadow-primary/25 h-9"
+          className="gap-1.5 self-start sm:self-auto font-semibold text-xs shadow-sm h-9"
         >
           <Sparkles className="h-3.5 w-3.5" />
           <span>Create Link</span>

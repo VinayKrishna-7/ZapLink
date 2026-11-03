@@ -75,8 +75,8 @@ export function Sidebar({
           className="flex items-center gap-2.5 overflow-hidden group hover:opacity-90 transition-opacity"
           title="Go to Homepage"
         >
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
-            <Zap className="h-5 w-5" />
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-foreground text-background shadow-sm">
+            <Zap className="h-5 w-5 fill-current" />
           </div>
           {(!collapsed || isMobile) && (
             <div className="flex flex-col">
@@ -124,15 +124,15 @@ export function Sidebar({
               className={cn(
                 "flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all group",
                 isActive
-                  ? "bg-primary/10 text-primary font-bold border border-primary/20"
-                  : "text-muted-foreground hover:bg-accent hover:text-foreground"
+                  ? "bg-foreground/10 text-foreground font-semibold border border-foreground/15 shadow-sm"
+                  : "text-muted-foreground hover:bg-muted/70 hover:text-foreground"
               )}
               title={collapsed && !isMobile ? item.name : undefined}
             >
               <Icon
                 className={cn(
                   "h-4 w-4 shrink-0 transition-transform group-hover:scale-110",
-                  isActive ? "text-primary" : "text-muted-foreground group-hover:text-foreground"
+                  isActive ? "text-foreground" : "text-muted-foreground group-hover:text-foreground"
                 )}
               />
               {(!collapsed || isMobile) && <span>{item.name}</span>}
@@ -154,7 +154,7 @@ export function Sidebar({
                 "flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all group",
                 pathname.startsWith("/admin")
                   ? "bg-amber-500/10 text-amber-500 font-bold border border-amber-500/20"
-                  : "text-muted-foreground hover:bg-accent hover:text-foreground"
+                  : "text-muted-foreground hover:bg-muted/70 hover:text-foreground"
               )}
               title={collapsed && !isMobile ? "Admin Control" : undefined}
             >

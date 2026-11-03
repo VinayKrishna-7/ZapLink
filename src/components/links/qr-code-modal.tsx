@@ -95,7 +95,7 @@ export function QrCodeModal({
     <Dialog open={open} onOpenChange={onOpenChange} maxWidth="max-w-md">
       <DialogHeader>
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-foreground/10 text-foreground border border-border">
             <QrIcon className="h-5 w-5" />
           </div>
           <div>
@@ -140,7 +140,7 @@ export function QrCodeModal({
           <button
             type="button"
             onClick={() => setShowOptions(!showOptions)}
-            className="flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
+            className="flex items-center gap-1 text-xs font-semibold text-foreground hover:underline"
           >
             <Sliders className="h-3 w-3" />
             <span>{showOptions ? "Hide customization" : "Customize colors & size"}</span>
@@ -161,7 +161,7 @@ export function QrCodeModal({
                         setDarkColor(preset.dark);
                         setLightColor(preset.light);
                       }}
-                      className="flex items-center gap-1.5 rounded-lg border border-border px-2 py-1 transition-all hover:border-primary text-[11px]"
+                      className="flex items-center gap-1.5 rounded-lg border border-border px-2 py-1 transition-all hover:border-foreground text-[11px]"
                     >
                       <div
                         className="h-2.5 w-2.5 rounded-full border"
@@ -185,7 +185,7 @@ export function QrCodeModal({
                       onClick={() => setSize(s)}
                       className={`flex-1 rounded-lg border py-1 font-medium text-[11px] transition-all ${
                         size === s
-                          ? "border-primary bg-primary/10 text-primary font-bold"
+                          ? "border-foreground bg-foreground/10 text-foreground font-bold"
                           : "border-border text-muted-foreground hover:bg-muted"
                       }`}
                     >

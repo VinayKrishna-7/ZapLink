@@ -119,9 +119,9 @@ export default function DashboardPage() {
         </div>
 
         <Button
-          variant="glow"
+          variant="default"
           onClick={() => setCreateModalOpen(true)}
-          className="gap-2 self-start sm:self-auto font-semibold text-xs shadow-md shadow-primary/25 h-9 px-4 shrink-0"
+          className="gap-2 self-start sm:self-auto font-semibold text-xs shadow-sm h-9 px-4 shrink-0"
         >
           <Sparkles className="h-4 w-4" />
           <span>Create Link</span>
@@ -132,13 +132,13 @@ export default function DashboardPage() {
       <Card className="w-full p-3.5 sm:p-4 border-border bg-card">
         <div className="flex items-center justify-between mb-2.5">
           <div className="flex items-center gap-1.5">
-            <Link2 className="h-3.5 w-3.5 text-primary" />
+            <Link2 className="h-3.5 w-3.5 text-foreground" />
             <h2 className="text-xs font-semibold text-foreground">Shorten a URL</h2>
           </div>
           <button
             type="button"
             onClick={() => setCreateModalOpen(true)}
-            className="text-[11px] text-primary hover:underline font-medium flex items-center gap-1"
+            className="text-[11px] text-muted-foreground hover:text-foreground hover:underline font-medium flex items-center gap-1"
           >
             <span>Advanced options</span>
             <ArrowRight className="h-3 w-3" />
@@ -190,7 +190,7 @@ export default function DashboardPage() {
             </h3>
             <p className="text-[10px] text-muted-foreground mt-0.5">Real-time aggregate engagement</p>
           </div>
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-muted text-foreground">
             <MousePointerClick className="h-5 w-5" />
           </div>
         </Card>
@@ -206,7 +206,7 @@ export default function DashboardPage() {
             </h3>
             <p className="text-[10px] text-muted-foreground mt-0.5">Routing traffic live</p>
           </div>
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/15 text-emerald-400">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-muted text-foreground">
             <Globe2 className="h-5 w-5" />
           </div>
         </Card>
@@ -239,7 +239,7 @@ export default function DashboardPage() {
           </div>
           <Link href="/dashboard/analytics">
             <Button variant="outline" size="sm" className="text-xs h-7 px-2.5 font-semibold gap-1">
-              <BarChart3 className="h-3 w-3 text-primary" />
+              <BarChart3 className="h-3 w-3 text-foreground" />
               <span>Full Analytics</span>
               <ArrowRight className="h-2.5 w-2.5" />
             </Button>
@@ -251,18 +251,18 @@ export default function DashboardPage() {
             <AreaChart data={sparklineData} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
               <defs>
                 <linearGradient id="dashboardSparkGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#E11D48" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#E11D48" stopOpacity={0} />
+                  <stop offset="5%" stopColor="currentColor" stopOpacity={0.25} />
+                  <stop offset="95%" stopColor="currentColor" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <XAxis dataKey="date" stroke="#A88B94" fontSize={10} tickLine={false} />
-              <YAxis stroke="#A88B94" fontSize={10} tickLine={false} allowDecimals={false} />
+              <XAxis dataKey="date" stroke="currentColor" opacity={0.5} fontSize={10} tickLine={false} />
+              <YAxis stroke="currentColor" opacity={0.5} fontSize={10} tickLine={false} allowDecimals={false} />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: "rgba(18, 10, 13, 0.95)",
-                  borderColor: "rgba(225, 29, 72, 0.25)",
+                  backgroundColor: "hsl(var(--card))",
+                  borderColor: "hsl(var(--border))",
                   borderRadius: "0.5rem",
-                  color: "#FFF1F2",
+                  color: "hsl(var(--foreground))",
                   fontSize: "11px",
                   padding: "6px 10px",
                 }}
@@ -270,7 +270,7 @@ export default function DashboardPage() {
               <Area
                 type="monotone"
                 dataKey="clicks"
-                stroke="#E11D48"
+                stroke="currentColor"
                 strokeWidth={2}
                 fillOpacity={1}
                 fill="url(#dashboardSparkGradient)"
@@ -285,7 +285,7 @@ export default function DashboardPage() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2.5 border-b border-border/70">
           <div>
             <div className="flex items-center gap-1.5">
-              <Link2 className="h-3.5 w-3.5 text-primary" />
+              <Link2 className="h-3.5 w-3.5 text-foreground" />
               <CardTitle className="text-sm font-bold">Your Short Links</CardTitle>
             </div>
             <CardDescription className="text-[11px] mt-0.5">

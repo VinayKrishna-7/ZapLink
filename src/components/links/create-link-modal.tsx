@@ -148,7 +148,7 @@ export function CreateLinkModal({
       <Dialog open={open} onOpenChange={onOpenChange} maxWidth="max-w-xl">
         <DialogHeader>
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-foreground/10 text-foreground border border-border">
               <Sparkles className="h-5 w-5" />
             </div>
             <div>
@@ -173,11 +173,11 @@ export function CreateLinkModal({
               </p>
 
               <div className="mt-5 flex items-center justify-between rounded-xl border border-border bg-card/80 p-3 shadow-inner">
-                <span className="font-mono text-sm font-semibold text-primary truncate mr-2">
+                <span className="font-mono text-sm font-semibold text-foreground truncate mr-2">
                   {createdLink.shortUrl}
                 </span>
                 <div className="flex items-center gap-1.5 shrink-0">
-                  <CopyButton text={createdLink.shortUrl} size="sm" variant="glow" label="Copy" />
+                  <CopyButton text={createdLink.shortUrl} size="sm" variant="default" label="Copy" />
                   <Button
                     size="sm"
                     variant="outline"
@@ -371,7 +371,7 @@ export function CreateLinkModal({
               </Button>
               <Button
                 type="submit"
-                variant="glow"
+                variant="default"
                 isLoading={isLoading}
                 disabled={!destinationUrl}
               >
