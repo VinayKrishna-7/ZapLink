@@ -12,7 +12,7 @@ export function LandingNavbar() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/70 bg-background/80 backdrop-blur-md">
-      <div className="container mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+      <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
         {/* Brand Logo & Nav */}
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2 group">
@@ -24,22 +24,12 @@ export function LandingNavbar() {
             </span>
           </Link>
 
-          {/* Navigation Links */}
-          <nav className="hidden md:flex items-center gap-6 text-sm text-muted-foreground font-medium">
-            <a href="#features" className="hover:text-foreground transition-colors">
-              Features
-            </a>
-            <a href="#analytics" className="hover:text-foreground transition-colors">
-              Analytics
-            </a>
-            <a href="#how-it-works" className="hover:text-foreground transition-colors">
-              How It Works
-            </a>
-            <a href="#developers" className="hover:text-foreground transition-colors">
-              API
-            </a>
+          <nav className="flex items-center gap-5 text-sm text-muted-foreground font-medium">
             <Link href="/docs" className="hover:text-foreground transition-colors">
               Docs
+            </Link>
+            <Link href="/report" className="hover:text-foreground transition-colors">
+              Report Abuse
             </Link>
           </nav>
         </div>
