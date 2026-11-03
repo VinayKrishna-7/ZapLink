@@ -22,6 +22,8 @@ export const metadata: Metadata = {
     "Fast, secure URL shortener SaaS with real-time analytics, instant QR codes, and audience insights.",
   icons: {
     icon: [
+      { url: "/icon-dark.svg", media: "(prefers-color-scheme: dark)", type: "image/svg+xml" },
+      { url: "/icon-light.svg", media: "(prefers-color-scheme: light)", type: "image/svg+xml" },
       { url: "/icon.svg", type: "image/svg+xml" },
       { url: "/icon.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon.ico", sizes: "any" },

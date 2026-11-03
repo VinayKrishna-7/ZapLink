@@ -11,7 +11,7 @@ export default function NotFound() {
       <div className="w-full max-w-md text-center animate-fade-in">
         <div className="flex justify-center mb-8">
           <Link href="/" prefetch={true} className="flex items-center gap-2.5">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black border border-neutral-800 shadow-sm">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white dark:bg-black border border-border/80 dark:border-neutral-800 shadow-sm transition-colors">
               <Zap className="h-6 w-6 fill-[#E11D48] text-[#E11D48]" />
             </div>
             <span className="font-extrabold text-xl tracking-tight text-foreground">

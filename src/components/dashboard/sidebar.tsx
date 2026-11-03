@@ -74,7 +74,7 @@ export function Sidebar({
           className="flex items-center gap-2.5 overflow-hidden group hover:opacity-90 transition-opacity"
           title="Go to Homepage"
         >
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-black border border-neutral-800 shadow-sm">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white dark:bg-black border border-border/80 dark:border-neutral-800 shadow-sm transition-colors">
             <Zap className="h-5 w-5 fill-[#E11D48] text-[#E11D48]" />
           </div>
           {(!collapsed || isMobile) && (
