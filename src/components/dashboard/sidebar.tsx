@@ -69,9 +69,11 @@ export function Sidebar({
       {/* Brand Logo Header */}
       <div className="flex h-16 items-center justify-between px-4 border-b border-border/80 shrink-0">
         <Link
-          href="/dashboard"
+          href="/"
+          prefetch={true}
           onClick={handleNavClick}
-          className="flex items-center gap-2.5 overflow-hidden"
+          className="flex items-center gap-2.5 overflow-hidden group hover:opacity-90 transition-opacity"
+          title="Go to Homepage"
         >
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
             <Zap className="h-5 w-5" />
