@@ -16,7 +16,7 @@
     --secondary: 345 30% 92%; /* #F5E8EB */
     --secondary-foreground: 340 37% 8%;
     --muted: 345 30% 92%;
-    --muted-foreground: 342 12% 42%; /* #785E67 */
+    --muted-foreground: 340 25% 28%; /* High contrast, easy to read */
     --accent: 347 77% 50%; /* #E11D48 */
     --accent-foreground: 356 100% 97%;
     --destructive: 0 72% 51%;
@@ -46,7 +46,7 @@
     --secondary: 341 33% 9%; /* #201015 Deep burgundy */
     --secondary-foreground: 356 100% 97%;
     --muted: 341 33% 9%;
-    --muted-foreground: 341 14% 60%; /* #A88B94 Muted Rosewood */
+    --muted-foreground: 345 20% 74%; /* Crisp, clear readable text */
     --accent: 347 77% 50%; /* #E11D48 Deep Ruby */
     --accent-foreground: 356 100% 97%;
     --destructive: 0 72% 51%;

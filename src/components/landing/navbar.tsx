@@ -15,16 +15,16 @@ export function LandingNavbar() {
       <div className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
         {/* Brand Logo & Nav */}
         <div className="flex items-center gap-8">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm group-hover:opacity-90 transition-opacity">
-              <Zap className="h-4 w-4 fill-current" />
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm group-hover:opacity-90 transition-opacity">
+              <Zap className="h-4.5 w-4.5 fill-current" />
             </div>
-            <span className="font-bold text-base tracking-tight text-foreground">
+            <span className="font-extrabold text-lg tracking-tight text-foreground">
               ZapLink
             </span>
           </Link>
 
-          <nav className="flex items-center gap-5 text-sm text-muted-foreground font-medium">
+          <nav className="flex items-center gap-6 text-sm sm:text-[15px] text-foreground/80 font-semibold">
             <Link href="/docs" className="hover:text-foreground transition-colors">
               Docs
             </Link>
