@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { getShortUrl, formatNumber, formatRelativeTime } from "@/lib/utils";
+import { useLinks, invalidateLinksCache } from "@/lib/use-links";
 import {
   AreaChart,
   Area,
@@ -37,8 +38,7 @@ export default function DashboardPage() {
   const { data: session } = useSession();
   const { toast, error: toastError } = useToast();
 
-  const [links, setLinks] = React.useState<LinkItem[]>([]);
-  const [isLoading, setIsLoading] = React.useState(true);
+  const { links, isLoading, refresh: fetchLinks } = useLinks();
 
   // Quick shorten form state
   const [quickUrl, setQuickUrl] = React.useState("");
@@ -46,25 +46,6 @@ export default function DashboardPage() {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [qrModalLink, setQrModalLink] = React.useState<LinkItem | null>(null);
   const [createModalOpen, setCreateModalOpen] = React.useState(false);
-
-  const fetchLinks = React.useCallback(async () => {
-    try {
-      setIsLoading(true);
-      const res = await fetch("/api/v1/links?limit=100");
-      const json = await res.json();
-      if (res.ok && json.data) {
-        setLinks(json.data);
-      }
-    } catch (err) {
-      console.error("Failed to fetch links:", err);
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
-
-  React.useEffect(() => {
-    fetchLinks();
-  }, [fetchLinks]);
 
   // Aggregate stats
   const totalClicks = links.reduce((acc, l) => acc + (l.clickCount || 0), 0);

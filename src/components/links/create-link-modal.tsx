@@ -8,6 +8,7 @@ import { Switch } from "../ui/switch";
 import { useToast } from "../ui/toast";
 import { Link as LinkIcon, Sparkles, Tag as TagIcon, Lock, Clock, BarChart2, Check, Copy } from "lucide-react";
 import { getShortUrl } from "@/lib/utils";
+import { invalidateLinksCache } from "@/lib/use-links";
 import { CopyButton } from "../shared/copy-button";
 import { QrCodeModal } from "./qr-code-modal";
 
@@ -126,6 +127,7 @@ export function CreateLinkModal({
       }
 
       setCreatedLink(json.data);
+      invalidateLinksCache();
 
       toast({
         type: "success",

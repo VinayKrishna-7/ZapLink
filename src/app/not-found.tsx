@@ -4,20 +4,13 @@ import Link from "next/link";
 import { Zap, ArrowLeft, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
-import { motion } from "framer-motion";
 
 export default function NotFound() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-4 relative overflow-hidden bg-background text-foreground">
-
-
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="w-full max-w-md text-center"
-      >
+      <div className="w-full max-w-md text-center animate-fade-in">
         <div className="flex justify-center mb-8">
-          <Link href="/" className="flex items-center gap-2.5">
+          <Link href="/" prefetch={true} className="flex items-center gap-2.5">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
               <Zap className="h-6 w-6" />
             </div>
@@ -27,7 +20,7 @@ export default function NotFound() {
           </Link>
         </div>
 
-        <Card className="p-8 backdrop-blur-xl shadow-2xl border-border">
+        <Card className="p-8 shadow-2xl border-border bg-card">
           <span className="font-mono text-6xl font-extrabold text-primary">404</span>
           <CardTitle className="text-xl font-bold mt-4">Page or Short Link Not Found</CardTitle>
           <CardDescription className="text-xs mt-2 leading-relaxed">
@@ -35,7 +28,7 @@ export default function NotFound() {
           </CardDescription>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
-            <Link href="/" className="w-full">
+            <Link href="/" prefetch={true} className="w-full">
               <Button className="w-full gap-2 text-xs font-semibold">
                 <Home className="h-4 w-4" />
                 <span>ZapLink Home</span>
@@ -43,7 +36,7 @@ export default function NotFound() {
             </Link>
           </div>
         </Card>
-      </motion.div>
+      </div>
     </div>
   );
 }

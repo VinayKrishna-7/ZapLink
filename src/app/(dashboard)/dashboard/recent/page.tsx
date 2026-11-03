@@ -10,21 +10,11 @@ import { LinkItem } from "@/types";
 import { History, ExternalLink, QrCode, MousePointerClick, Clock, Sparkles } from "lucide-react";
 import { getShortUrl, formatRelativeTime, formatNumber } from "@/lib/utils";
 import Link from "next/link";
+import { useLinks } from "@/lib/use-links";
 
 export default function RecentLinksPage() {
-  const [links, setLinks] = React.useState<LinkItem[]>([]);
-  const [isLoading, setIsLoading] = React.useState(true);
+  const { links, isLoading } = useLinks();
   const [qrModalLink, setQrModalLink] = React.useState<LinkItem | null>(null);
-
-  React.useEffect(() => {
-    fetch("/api/v1/links?limit=50")
-      .then((res) => res.json())
-      .then((json) => {
-        if (json.data) setLinks(json.data);
-      })
-      .catch(console.error)
-      .finally(() => setIsLoading(false));
-  }, []);
 
   return (
     <div className="w-full space-y-4 animate-fade-in pb-4">

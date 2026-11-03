@@ -57,7 +57,7 @@ export function Sidebar({
   return (
     <aside
       className={cn(
-        "flex flex-col border-r border-border/80 bg-card backdrop-blur-xl transition-all duration-300 text-card-foreground",
+        "flex flex-col border-r border-border/80 bg-card transition-all duration-200 text-card-foreground",
         isMobile
           ? "h-full w-full"
           : cn(
@@ -117,6 +117,7 @@ export function Sidebar({
             <Link
               key={item.name}
               href={item.href}
+              prefetch={true}
               onClick={handleNavClick}
               className={cn(
                 "flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all group",
@@ -145,6 +146,7 @@ export function Sidebar({
             </div>
             <Link
               href="/admin"
+              prefetch={true}
               onClick={handleNavClick}
               className={cn(
                 "flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all group",

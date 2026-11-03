@@ -4,32 +4,12 @@ import * as React from "react";
 import { LinkTable } from "@/components/links/link-table";
 import { CreateLinkModal } from "@/components/links/create-link-modal";
 import { Button } from "@/components/ui/button";
-import { LinkItem } from "@/types";
 import { Sparkles, Link2 } from "lucide-react";
+import { useLinks } from "@/lib/use-links";
 
 export default function LinksPage() {
-  const [links, setLinks] = React.useState<LinkItem[]>([]);
-  const [isLoading, setIsLoading] = React.useState(true);
+  const { links, isLoading, refresh: fetchLinks } = useLinks();
   const [createModalOpen, setCreateModalOpen] = React.useState(false);
-
-  const fetchLinks = React.useCallback(async () => {
-    try {
-      setIsLoading(true);
-      const res = await fetch("/api/v1/links?limit=100");
-      const json = await res.json();
-      if (res.ok && json.data) {
-        setLinks(json.data);
-      }
-    } catch (err) {
-      console.error("Failed to load links:", err);
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
-
-  React.useEffect(() => {
-    fetchLinks();
-  }, [fetchLinks]);
 
   return (
     <div className="w-full space-y-4 animate-fade-in pb-4">

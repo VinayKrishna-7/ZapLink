@@ -18,7 +18,7 @@ export function Topbar({
   const { data: session } = useSession();
 
   return (
-    <header className="sticky top-0 z-20 flex h-16 w-full items-center justify-between border-b border-border/80 bg-background/80 px-4 sm:px-6 backdrop-blur-xl">
+    <header className="sticky top-0 z-20 flex h-16 w-full items-center justify-between border-b border-border/80 bg-background/95 px-4 sm:px-6">
       {/* Left: Mobile hamburger & Search trigger */}
       <div className="flex items-center gap-3">
         <button

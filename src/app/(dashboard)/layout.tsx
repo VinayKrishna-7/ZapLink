@@ -7,6 +7,7 @@ import { Sidebar } from "@/components/dashboard/sidebar";
 import { Topbar } from "@/components/dashboard/topbar";
 import { CommandPalette } from "@/components/shared/command-palette";
 import { CreateLinkModal } from "@/components/links/create-link-modal";
+import { invalidateLinksCache } from "@/lib/use-links";
 import { cn } from "@/lib/utils";
 
 export default function DashboardLayout({
@@ -104,7 +105,7 @@ export default function DashboardLayout({
         open={createModalOpen}
         onOpenChange={setCreateModalOpen}
         onSuccess={() => {
-          window.location.reload();
+          invalidateLinksCache();
         }}
       />
     </div>

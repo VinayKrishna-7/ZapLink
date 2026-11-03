@@ -19,7 +19,7 @@ export default function Error({
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-4 bg-background text-foreground">
-      <Card className="p-8 max-w-md w-full text-center backdrop-blur-xl border-border shadow-2xl">
+      <Card className="p-8 max-w-md w-full text-center bg-card border-border shadow-2xl">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-rose-500/10 text-rose-500 mb-4 ring-8 ring-rose-500/5">
           <AlertTriangle className="h-7 w-7" />
         </div>

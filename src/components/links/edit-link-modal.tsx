@@ -7,6 +7,7 @@ import { Input } from "../ui/input";
 import { useToast } from "../ui/toast";
 import { LinkItem, LinkStatus } from "@/types";
 import { Edit2, Link as LinkIcon, Tag as TagIcon, Clock } from "lucide-react";
+import { invalidateLinksCache } from "@/lib/use-links";
 
 interface EditLinkModalProps {
   open: boolean;
@@ -81,6 +82,7 @@ export function EditLinkModal({
         description: "Your changes have been saved successfully.",
       });
 
+      invalidateLinksCache();
       onOpenChange(false);
       if (onSuccess) onSuccess();
     } catch (err: unknown) {

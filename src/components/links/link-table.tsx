@@ -28,6 +28,7 @@ import { QrCodeModal } from "./qr-code-modal";
 import { EditLinkModal } from "./edit-link-modal";
 import { useToast } from "../ui/toast";
 import { getShortUrl, formatDate, formatNumber } from "@/lib/utils";
+import { updateLinksLocally } from "@/lib/use-links";
 
 interface LinkTableProps {
   links: LinkItem[];
@@ -101,6 +102,9 @@ export function LinkTable({
 
   const handleToggleStatus = async (link: LinkItem) => {
     const newStatus = link.status === "ACTIVE" ? "DISABLED" : "ACTIVE";
+    updateLinksLocally((prev) =>
+      prev.map((l) => (l.id === link.id ? { ...l, status: newStatus } : l))
+    );
     try {
       const res = await fetch(`/api/v1/links/${link.id}`, {
         method: "PATCH",
@@ -119,14 +123,17 @@ export function LinkTable({
       if (onRefresh) onRefresh();
     } catch (err: unknown) {
       toastError("Error", (err as Error).message);
+      if (onRefresh) onRefresh();
     }
   };
 
   const handleDelete = async () => {
     if (!deleteModalLink) return;
+    const targetId = deleteModalLink.id;
+    updateLinksLocally((prev) => prev.filter((l) => l.id !== targetId));
     setIsDeleting(true);
     try {
-      const res = await fetch(`/api/v1/links/${deleteModalLink.id}`, {
+      const res = await fetch(`/api/v1/links/${targetId}`, {
         method: "DELETE",
       });
 
@@ -142,6 +149,7 @@ export function LinkTable({
       if (onRefresh) onRefresh();
     } catch (err: unknown) {
       toastError("Error", (err as Error).message);
+      if (onRefresh) onRefresh();
     } finally {
       setIsDeleting(false);
     }

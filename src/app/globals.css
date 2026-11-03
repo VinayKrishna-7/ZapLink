@@ -118,12 +118,6 @@
   box-shadow: none;
 }
 
-/* Snappy transitions */
-button, a, input, select {
-  transition-property: color, background-color, border-color, transform, opacity;
-  transition-duration: 120ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 /* Hide Next.js dev indicator badge */
 nextjs-portal,

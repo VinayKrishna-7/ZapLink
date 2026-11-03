@@ -10,21 +10,11 @@ import { KpiCard } from "@/components/analytics/kpi-card";
 import { BarChart3, MousePointerClick, Users, Globe2, Percent } from "lucide-react";
 import { LinkItem } from "@/types";
 import { formatNumber } from "@/lib/utils";
+import { useLinks } from "@/lib/use-links";
 
 export default function GlobalAnalyticsPage() {
-  const [links, setLinks] = React.useState<LinkItem[]>([]);
-  const [isLoading, setIsLoading] = React.useState(true);
+  const { links, isLoading } = useLinks();
   const [timeRange, setTimeRange] = React.useState<"7d" | "30d" | "all">("30d");
-
-  React.useEffect(() => {
-    fetch("/api/v1/links?limit=100")
-      .then((res) => res.json())
-      .then((json) => {
-        if (json.data) setLinks(json.data);
-      })
-      .catch(console.error)
-      .finally(() => setIsLoading(false));
-  }, []);
 
   const totalClicks = links.reduce((acc, l) => acc + (l.clickCount || 0), 0);
   const uniqueVisitors = Math.floor(totalClicks * 0.82);

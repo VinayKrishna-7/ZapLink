@@ -37,6 +37,14 @@ export function CommandPalette({
   const [query, setQuery] = React.useState("");
 
   React.useEffect(() => {
+    router.prefetch("/dashboard");
+    router.prefetch("/dashboard/links");
+    router.prefetch("/dashboard/analytics");
+    router.prefetch("/dashboard/recent");
+    router.prefetch("/dashboard/settings");
+  }, [router]);
+
+  React.useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
         e.preventDefault();
