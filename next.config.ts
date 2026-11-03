@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  devIndicators: false,
   experimental: {
     optimizePackageImports: ["lucide-react", "recharts", "framer-motion", "date-fns", "clsx", "tailwind-merge"],
   },
