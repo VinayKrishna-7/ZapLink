@@ -125,18 +125,18 @@ export function ClicksChart({
             <AreaChart data={filteredData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <defs>
                 <linearGradient id="clicksGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#A88B64" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#A88B64" stopOpacity={0.0} />
+                  <stop offset="5%" stopColor="#E11D48" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#E11D48" stopOpacity={0.0} />
                 </linearGradient>
                 <linearGradient id="visitorsGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#77736D" stopOpacity={0.2} />
-                  <stop offset="95%" stopColor="#77736D" stopOpacity={0.0} />
+                  <stop offset="5%" stopColor="#A88B94" stopOpacity={0.2} />
+                  <stop offset="95%" stopColor="#A88B94" stopOpacity={0.0} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(148, 163, 184, 0.1)" vertical={false} />
               <XAxis
                 dataKey="date"
-                stroke="#77736D"
+                stroke="#A88B94"
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
@@ -150,7 +150,7 @@ export function ClicksChart({
                 }}
               />
               <YAxis
-                stroke="#77736D"
+                stroke="#A88B94"
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
@@ -160,7 +160,7 @@ export function ClicksChart({
               <Area
                 type="monotone"
                 dataKey="clicks"
-                stroke="#A88B64"
+                stroke="#E11D48"
                 strokeWidth={2.5}
                 fillOpacity={1}
                 fill="url(#clicksGrad)"
@@ -169,7 +169,7 @@ export function ClicksChart({
               <Area
                 type="monotone"
                 dataKey="uniqueVisitors"
-                stroke="#77736D"
+                stroke="#A88B94"
                 strokeWidth={2}
                 fillOpacity={1}
                 fill="url(#visitorsGrad)"

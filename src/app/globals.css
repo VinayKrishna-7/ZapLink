@@ -4,62 +4,62 @@
 
 @layer base {
   :root {
-    --background: 40 31% 94%; /* #F5F2EC Main background */
-    --foreground: 0 0% 10%; /* #191919 Primary text */
-    --card: 38 26% 88%; /* #E8E2D8 Secondary background */
-    --card-foreground: 0 0% 10%;
-    --popover: 38 26% 88%;
-    --popover-foreground: 0 0% 10%;
-    --primary: 0 0% 15%; /* #252525 Primary buttons */
-    --primary-foreground: 40 31% 94%; /* #F5F2EC */
-    --primary-hover: 0 0% 24%;
-    --secondary: 38 26% 88%; /* #E8E2D8 */
-    --secondary-foreground: 0 0% 10%;
-    --muted: 38 26% 88%; /* #E8E2D8 */
-    --muted-foreground: 36 4% 45%; /* #77736D Secondary text */
-    --accent: 34 28% 53%; /* #A88B64 Accent */
-    --accent-foreground: 40 31% 94%;
+    --background: 348 40% 97%; /* #FAF5F6 Alabaster Rose */
+    --foreground: 340 37% 8%; /* #1C0D12 Bordeaux Black */
+    --card: 348 50% 99%; /* #FFF9FA */
+    --card-foreground: 340 37% 8%;
+    --popover: 348 50% 99%;
+    --popover-foreground: 340 37% 8%;
+    --primary: 347 77% 50%; /* #E11D48 Deep Ruby */
+    --primary-foreground: 356 100% 97%; /* #FFF1F2 Rose Silk */
+    --primary-hover: 345 82% 41%; /* #BE123C */
+    --secondary: 345 30% 92%; /* #F5E8EB */
+    --secondary-foreground: 340 37% 8%;
+    --muted: 345 30% 92%;
+    --muted-foreground: 342 12% 42%; /* #785E67 */
+    --accent: 347 77% 50%; /* #E11D48 */
+    --accent-foreground: 356 100% 97%;
     --destructive: 0 72% 51%;
-    --destructive-foreground: 40 31% 94%;
-    --border: 37 20% 83%; /* #DCD5CA Borders */
-    --input: 37 20% 83%; /* #DCD5CA */
-    --ring: 34 28% 53%; /* #A88B64 */
+    --destructive-foreground: 356 100% 97%;
+    --border: 345 30% 86%; /* #EED7DC */
+    --input: 345 30% 86%;
+    --ring: 347 77% 50%;
     --radius: 0.5rem;
 
-    --chart-1: 34 28% 53%; /* #A88B64 Accent */
-    --chart-2: 0 0% 15%; /* #252525 */
-    --chart-3: 36 4% 45%; /* #77736D */
-    --chart-4: 37 20% 83%; /* #DCD5CA */
-    --chart-5: 38 26% 88%; /* #E8E2D8 */
+    --chart-1: 347 77% 50%; /* #E11D48 */
+    --chart-2: 345 82% 41%; /* #BE123C */
+    --chart-3: 340 37% 8%; /* #1C0D12 */
+    --chart-4: 342 12% 42%; /* #785E67 */
+    --chart-5: 345 30% 92%;
   }
 
   .dark {
-    --background: 0 0% 0%; /* Full high dark */
-    --foreground: 40 31% 94%; /* #F5F2EC Primary text */
-    --card: 30 8% 6%; /* #12110F Deep black with sand undertone */
-    --card-foreground: 40 31% 94%;
-    --popover: 30 8% 6%;
-    --popover-foreground: 40 31% 94%;
-    --primary: 40 31% 94%; /* #F5F2EC Sand button in dark mode */
-    --primary-foreground: 0 0% 10%; /* #191919 */
-    --primary-hover: 38 26% 88%; /* #E8E2D8 */
-    --secondary: 30 8% 12%;
-    --secondary-foreground: 40 31% 94%;
-    --muted: 30 8% 10%;
-    --muted-foreground: 36 8% 60%; /* Warm secondary text */
-    --accent: 34 28% 53%; /* #A88B64 Accent */
-    --accent-foreground: 0 0% 10%;
+    --background: 0 0% 0%; /* Full high dark / Pitch black */
+    --foreground: 356 100% 97%; /* #FFF1F2 Rose Silk text */
+    --card: 338 29% 6%; /* #120A0D Wine Charcoal */
+    --card-foreground: 356 100% 97%;
+    --popover: 338 29% 6%;
+    --popover-foreground: 356 100% 97%;
+    --primary: 347 77% 50%; /* #E11D48 Deep Ruby button */
+    --primary-foreground: 356 100% 97%;
+    --primary-hover: 345 82% 44%; /* #C7143F */
+    --secondary: 341 33% 9%; /* #201015 Deep burgundy */
+    --secondary-foreground: 356 100% 97%;
+    --muted: 341 33% 9%;
+    --muted-foreground: 341 14% 60%; /* #A88B94 Muted Rosewood */
+    --accent: 347 77% 50%; /* #E11D48 Deep Ruby */
+    --accent-foreground: 356 100% 97%;
     --destructive: 0 72% 51%;
-    --destructive-foreground: 40 31% 94%;
-    --border: 36 8% 16%; /* #2B2824 Warm dark border */
-    --input: 36 8% 16%;
-    --ring: 34 28% 53%; /* #A88B64 Accent */
+    --destructive-foreground: 356 100% 97%;
+    --border: 343 36% 14%; /* #2D151C Subtle wine border */
+    --input: 343 36% 14%;
+    --ring: 347 77% 50%; /* #E11D48 */
 
-    --chart-1: 34 28% 53%; /* #A88B64 Accent */
-    --chart-2: 40 31% 94%; /* #F5F2EC Sand */
-    --chart-3: 38 26% 88%; /* #E8E2D8 */
-    --chart-4: 36 8% 60%;
-    --chart-5: 30 8% 16%;
+    --chart-1: 347 77% 50%; /* #E11D48 Deep Ruby */
+    --chart-2: 345 82% 41%; /* #BE123C Bordeaux */
+    --chart-3: 356 100% 97%; /* #FFF1F2 Rose Silk */
+    --chart-4: 341 14% 60%; /* #A88B94 */
+    --chart-5: 341 33% 9%; /* #201015 */
   }
 }
 
@@ -81,19 +81,19 @@
   }
 }
 
-/* Crisp neutral card layers */
+/* Luxury wine & ruby card layers */
 .glassmorphism {
-  background: rgba(18, 17, 15, 0.85);
+  background: rgba(18, 10, 13, 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(220, 213, 202, 0.12);
+  border: 1px solid rgba(225, 29, 72, 0.15);
 }
 
 .glassmorphism-light {
-  background: rgba(245, 242, 236, 0.95);
+  background: rgba(250, 245, 246, 0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(220, 213, 202, 0.6);
+  border: 1px solid rgba(225, 29, 72, 0.15);
 }
 
 /* Custom Scrollbar */

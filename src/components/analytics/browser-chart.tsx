@@ -15,7 +15,7 @@ interface BrowserChartProps {
   data: BrowserData[];
 }
 
-const BAR_COLORS = ["#A88B64", "#F5F2EC", "#E8E2D8", "#77736D", "#252525"];
+const BAR_COLORS = ["#E11D48", "#BE123C", "#9F1239", "#A88B94", "#201015"];
 
 export function BrowserChart({ data }: BrowserChartProps) {
   const chartData = data && data.length > 0 ? data : [
@@ -42,7 +42,7 @@ export function BrowserChart({ data }: BrowserChartProps) {
             <YAxis
               type="category"
               dataKey="name"
-              stroke="#77736D"
+              stroke="#A88B94"
               fontSize={11}
               tickLine={false}
               axisLine={false}
@@ -50,11 +50,11 @@ export function BrowserChart({ data }: BrowserChartProps) {
             <Tooltip
               formatter={(value: number) => [`${value} clicks`, "Traffic"]}
               contentStyle={{
-                backgroundColor: "rgba(25, 25, 25, 0.95)",
-                borderColor: "rgba(220, 213, 202, 0.2)",
+                backgroundColor: "rgba(18, 10, 13, 0.95)",
+                borderColor: "rgba(225, 29, 72, 0.25)",
                 borderRadius: "0.75rem",
                 fontSize: "12px",
-                color: "#F5F2EC",
+                color: "#FFF1F2",
               }}
             />
             <Bar dataKey="value" radius={[0, 8, 8, 0]}>

@@ -270,18 +270,18 @@ export default function DashboardPage() {
             <AreaChart data={sparklineData} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
               <defs>
                 <linearGradient id="dashboardSparkGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#A88B64" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#A88B64" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#E11D48" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#E11D48" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <XAxis dataKey="date" stroke="#77736D" fontSize={10} tickLine={false} />
-              <YAxis stroke="#77736D" fontSize={10} tickLine={false} allowDecimals={false} />
+              <XAxis dataKey="date" stroke="#A88B94" fontSize={10} tickLine={false} />
+              <YAxis stroke="#A88B94" fontSize={10} tickLine={false} allowDecimals={false} />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: "rgba(25, 25, 25, 0.95)",
-                  borderColor: "rgba(220, 213, 202, 0.2)",
+                  backgroundColor: "rgba(18, 10, 13, 0.95)",
+                  borderColor: "rgba(225, 29, 72, 0.25)",
                   borderRadius: "0.5rem",
-                  color: "#F5F2EC",
+                  color: "#FFF1F2",
                   fontSize: "11px",
                   padding: "6px 10px",
                 }}
@@ -289,7 +289,7 @@ export default function DashboardPage() {
               <Area
                 type="monotone"
                 dataKey="clicks"
-                stroke="#A88B64"
+                stroke="#E11D48"
                 strokeWidth={2}
                 fillOpacity={1}
                 fill="url(#dashboardSparkGradient)"

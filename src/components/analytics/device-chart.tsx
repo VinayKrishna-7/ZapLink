@@ -15,7 +15,7 @@ interface DeviceChartProps {
   data: DeviceData[];
 }
 
-const COLORS = ["#A88B64", "#F5F2EC", "#77736D"];
+const COLORS = ["#E11D48", "#BE123C", "#A88B94"];
 
 export function DeviceChart({ data }: DeviceChartProps) {
   const chartData = data && data.length > 0 ? data : [
@@ -48,11 +48,11 @@ export function DeviceChart({ data }: DeviceChartProps) {
             <Tooltip
               formatter={(value: number, name: string) => [`${value} clicks`, name]}
               contentStyle={{
-                backgroundColor: "rgba(25, 25, 25, 0.95)",
-                borderColor: "rgba(220, 213, 202, 0.2)",
+                backgroundColor: "rgba(18, 10, 13, 0.95)",
+                borderColor: "rgba(225, 29, 72, 0.25)",
                 borderRadius: "0.75rem",
                 fontSize: "12px",
-                color: "#F5F2EC",
+                color: "#FFF1F2",
               }}
             />
             <Pie

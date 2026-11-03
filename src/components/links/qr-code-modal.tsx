@@ -23,8 +23,8 @@ export function QrCodeModal({
 }: QrCodeModalProps) {
   const [dataUrl, setDataUrl] = React.useState<string>("");
   const [svgString, setSvgString] = React.useState<string>("");
-  const [darkColor, setDarkColor] = React.useState<string>("#000000");
-  const [lightColor, setLightColor] = React.useState<string>("#F5F2EC");
+  const [darkColor, setDarkColor] = React.useState<string>("#120A0D");
+  const [lightColor, setLightColor] = React.useState<string>("#FFF1F2");
   const [size, setSize] = React.useState<number>(512);
   const [showOptions, setShowOptions] = React.useState<boolean>(false);
 
@@ -84,11 +84,11 @@ export function QrCodeModal({
   };
 
   const presetColors = [
-    { name: "Black & Sand", dark: "#191919", light: "#F5F2EC" },
-    { name: "Deep Black", dark: "#000000", light: "#F5F2EC" },
-    { name: "Warm Accent", dark: "#A88B64", light: "#191919" },
-    { name: "Sand Inverted", dark: "#F5F2EC", light: "#191919" },
-    { name: "Secondary Muted", dark: "#77736D", light: "#F5F2EC" },
+    { name: "Bordeaux & Ruby", dark: "#1C0D12", light: "#FFF1F2" },
+    { name: "Midnight Velvet", dark: "#000000", light: "#FFF1F2" },
+    { name: "Deep Ruby", dark: "#E11D48", light: "#1C0D12" },
+    { name: "Rose Inverted", dark: "#FFF1F2", light: "#1C0D12" },
+    { name: "Wine Slate", dark: "#4C1D2D", light: "#FFF1F2" },
   ];
 
   return (
@@ -109,7 +109,7 @@ export function QrCodeModal({
 
       <div className="flex flex-col items-center gap-4 py-1 w-full">
         {/* Crisp Centered QR Code Card */}
-        <div className="flex items-center justify-center rounded-2xl border border-border bg-[#F5F2EC] p-3 shadow-lg shadow-black/20 w-48 h-48 mx-auto shrink-0">
+        <div className="flex items-center justify-center rounded-2xl border border-border bg-[#FFF1F2] p-3 shadow-lg shadow-black/20 w-48 h-48 mx-auto shrink-0">
           {dataUrl ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
