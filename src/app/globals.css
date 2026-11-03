@@ -10,26 +10,26 @@
     --card-foreground: 220 25% 10%;
     --popover: 0 0% 100%;
     --popover-foreground: 220 25% 10%;
-    --primary: 220 25% 10%; /* #12161F Solid black/charcoal button */
-    --primary-foreground: 0 0% 100%; /* #FFFFFF Crisp white text */
-    --primary-hover: 220 15% 20%; /* #272E3D */
+    --primary: 347 77% 50%; /* #E11D48 Deep Ruby */
+    --primary-foreground: 356 100% 97%; /* #FFF1F2 Rose Silk */
+    --primary-hover: 345 82% 44%; /* #C7143F */
     --secondary: 220 12% 84%; /* #D2D5DC Cement secondary */
     --secondary-foreground: 220 25% 10%;
     --muted: 220 12% 84%;
     --muted-foreground: 220 10% 36%; /* #545B69 High contrast readable text */
-    --accent: 220 12% 84%;
-    --accent-foreground: 220 25% 10%;
+    --accent: 347 77% 50%; /* #E11D48 */
+    --accent-foreground: 356 100% 97%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
     --border: 220 12% 78%; /* #C1C5CE Clean cement border */
     --input: 220 12% 78%;
-    --ring: 220 25% 10%;
+    --ring: 347 77% 50%;
     --radius: 0.5rem;
 
-    --chart-1: 220 25% 10%;
-    --chart-2: 220 10% 36%;
-    --chart-3: 220 12% 60%;
-    --chart-4: 220 12% 78%;
+    --chart-1: 347 77% 50%;
+    --chart-2: 345 82% 41%;
+    --chart-3: 220 25% 10%;
+    --chart-4: 220 10% 36%;
     --chart-5: 220 12% 84%;
   }
 
@@ -40,25 +40,25 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 5%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%; /* #FAFAFA Solid crisp white button */
-    --primary-foreground: 0 0% 7%; /* #121212 Solid black text */
-    --primary-hover: 0 0% 88%; /* #E0E0E0 */
+    --primary: 347 77% 50%; /* #E11D48 Deep Ruby */
+    --primary-foreground: 356 100% 97%; /* #FFF1F2 Rose Silk */
+    --primary-hover: 345 82% 44%; /* #C7143F */
     --secondary: 0 0% 10%; /* #1A1A1A */
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 10%;
     --muted-foreground: 0 0% 68%; /* #ADADAD High readability clear neutral text */
-    --accent: 0 0% 12%; /* #1F1F1F */
-    --accent-foreground: 0 0% 98%;
+    --accent: 347 77% 50%; /* #E11D48 */
+    --accent-foreground: 356 100% 97%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 14%; /* #242424 Full dark border */
     --input: 0 0% 14%;
-    --ring: 0 0% 98%;
+    --ring: 347 77% 50%;
 
-    --chart-1: 0 0% 98%;
-    --chart-2: 0 0% 75%;
-    --chart-3: 0 0% 50%;
-    --chart-4: 0 0% 30%;
+    --chart-1: 347 77% 50%;
+    --chart-2: 345 82% 41%;
+    --chart-3: 0 0% 98%;
+    --chart-4: 0 0% 68%;
     --chart-5: 0 0% 14%;
   }
 }

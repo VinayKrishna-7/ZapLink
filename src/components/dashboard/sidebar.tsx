@@ -75,8 +75,8 @@ export function Sidebar({
           className="flex items-center gap-2.5 overflow-hidden group hover:opacity-90 transition-opacity"
           title="Go to Homepage"
         >
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-black text-white border border-neutral-800 shadow-sm">
-            <Zap className="h-5 w-5 fill-current text-white" />
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-black border border-neutral-800 shadow-sm">
+            <Zap className="h-5 w-5 fill-[#E11D48] text-[#E11D48]" />
           </div>
           {(!collapsed || isMobile) && (
             <div className="flex flex-col">
@@ -132,7 +132,7 @@ export function Sidebar({
               <Icon
                 className={cn(
                   "h-4 w-4 shrink-0 transition-transform group-hover:scale-110",
-                  isActive ? "text-foreground" : "text-muted-foreground group-hover:text-foreground"
+                  isActive ? "text-primary" : "text-muted-foreground group-hover:text-foreground"
                 )}
               />
               {(!collapsed || isMobile) && <span>{item.name}</span>}
