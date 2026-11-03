@@ -119,8 +119,8 @@ export default function SignUpPage() {
       >
         <div className="flex justify-center mb-8">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
-              <Zap className="h-6 w-6" />
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-black text-white border border-neutral-800 shadow-sm">
+              <Zap className="h-6 w-6 fill-current text-white" />
             </div>
             <span className="font-extrabold text-2xl tracking-tight text-foreground">
               ZapLink

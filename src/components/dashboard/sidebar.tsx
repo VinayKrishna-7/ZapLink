@@ -75,8 +75,8 @@ export function Sidebar({
           className="flex items-center gap-2.5 overflow-hidden group hover:opacity-90 transition-opacity"
           title="Go to Homepage"
         >
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-foreground text-background shadow-sm">
-            <Zap className="h-5 w-5 fill-current" />
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-black text-white border border-neutral-800 shadow-sm">
+            <Zap className="h-5 w-5 fill-current text-white" />
           </div>
           {(!collapsed || isMobile) && (
             <div className="flex flex-col">

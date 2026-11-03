@@ -16,8 +16,8 @@ export function LandingNavbar() {
         {/* Brand Logo & Nav */}
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-foreground text-background shadow-sm group-hover:opacity-90 transition-opacity">
-              <Zap className="h-4.5 w-4.5 fill-current" />
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-black text-white border border-neutral-800 shadow-sm group-hover:opacity-90 transition-opacity">
+              <Zap className="h-4.5 w-4.5 fill-current text-white" />
             </div>
             <span className="font-extrabold text-lg tracking-tight text-foreground">
               ZapLink

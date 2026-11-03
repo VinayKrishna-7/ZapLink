@@ -11,8 +11,8 @@ export default function NotFound() {
       <div className="w-full max-w-md text-center animate-fade-in">
         <div className="flex justify-center mb-8">
           <Link href="/" prefetch={true} className="flex items-center gap-2.5">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
-              <Zap className="h-6 w-6" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-black text-white border border-neutral-800 shadow-sm">
+              <Zap className="h-6 w-6 fill-current text-white" />
             </div>
             <span className="font-extrabold text-xl tracking-tight text-foreground">
               ZapLink
@@ -21,7 +21,7 @@ export default function NotFound() {
         </div>
 
         <Card className="p-8 shadow-2xl border-border bg-card">
-          <span className="font-mono text-6xl font-extrabold text-primary">404</span>
+          <span className="font-mono text-6xl font-extrabold text-foreground">404</span>
           <CardTitle className="text-xl font-bold mt-4">Page or Short Link Not Found</CardTitle>
           <CardDescription className="text-xs mt-2 leading-relaxed">
             The link you followed may have expired, been deleted, or does not exist on ZapLink.
