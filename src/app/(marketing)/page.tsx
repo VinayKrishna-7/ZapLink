@@ -9,13 +9,14 @@ import { LandingCta } from "@/components/landing/cta";
 import { LandingFooter } from "@/components/landing/footer";
 
 export const metadata = {
-  title: "⚡ ZapLink — Modern URL Shortener & Analytics",
-  description: "Fast, secure URL shortener SaaS with real-time analytics, instant QR codes, and audience insights.",
+  title: "ZapLink — Open Source URL Shortener & Analytics",
+  description:
+    "Simple, fast URL shortener with real-time click tracking, custom aliases, and instant QR codes.",
 };
 
 export default function LandingPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground selection:bg-primary/20 selection:text-primary">
+    <div className="flex min-h-screen flex-col bg-background text-foreground">
       <LandingNavbar />
       <main className="flex-1">
         <LandingHero />

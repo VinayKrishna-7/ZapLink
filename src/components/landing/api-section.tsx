@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Terminal, Copy, Check, Code2, ArrowRight } from "lucide-react";
+import { Terminal, Code2, ArrowRight, Check } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { CopyButton } from "../shared/copy-button";
@@ -10,22 +10,22 @@ export function LandingApiSection() {
   const [activeTab, setActiveTab] = React.useState<"curl" | "typescript" | "python">("curl");
 
   const codeSnippets = {
-    curl: `curl -X POST https://zaplink.app/api/v1/links \\
+    curl: `curl -X POST https://zaplink-g4ui.onrender.com/api/v1/links \\
   -H "Authorization: Bearer zl_live_YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "destinationUrl": "https://example.com/products/summer-drop",
-    "customAlias": "summer26",
+    "destinationUrl": "https://example.com/blog/release-notes",
+    "customAlias": "release-v1",
     "utmSource": "newsletter",
-    "utmCampaign": "summer_promo"
+    "utmCampaign": "launch"
   }'`,
     typescript: `import axios from 'axios';
 
 const response = await axios.post(
-  'https://zaplink.app/api/v1/links',
+  'https://zaplink-g4ui.onrender.com/api/v1/links',
   {
-    destinationUrl: 'https://example.com/products/summer-drop',
-    customAlias: 'summer26',
+    destinationUrl: 'https://example.com/blog/release-notes',
+    customAlias: 'release-v1',
     utmSource: 'newsletter',
   },
   {
@@ -36,17 +36,17 @@ const response = await axios.post(
 );
 
 console.log(response.data.shortUrl);
-// => "https://zaplink.app/summer26"`,
+// => "https://zaplink-g4ui.onrender.com/release-v1"`,
     python: `import requests
 
-url = "https://zaplink.app/api/v1/links"
+url = "https://zaplink-g4ui.onrender.com/api/v1/links"
 headers = {
     "Authorization": "Bearer zl_live_YOUR_API_KEY",
     "Content-Type": "application/json"
 }
 payload = {
-    "destinationUrl": "https://example.com/products/summer-drop",
-    "customAlias": "summer26"
+    "destinationUrl": "https://example.com/blog/release-notes",
+    "customAlias": "release-v1"
 }
 
 response = requests.post(url, json=payload, headers=headers)
@@ -54,50 +54,50 @@ print(response.json()["data"]["shortUrl"])`,
   };
 
   return (
-    <section id="developers" className="py-20 md:py-28 bg-muted/15 border-t border-border/60 relative">
+    <section id="developers" className="py-16 md:py-24 bg-muted/20 border-t border-border/60">
       <div className="container mx-auto max-w-6xl px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Column: Info & CTA */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3.5 py-1 text-xs font-semibold text-cyan-400">
+          <div className="lg:col-span-5 space-y-5">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/60 px-3 py-1 text-xs font-medium text-muted-foreground">
               <Code2 className="h-3.5 w-3.5" />
-              <span>Developer First Architecture</span>
+              <span>Developer API</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">
-              Programmatic link shortening for modern developers
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
+              Integrate link shortening into your stack
             </h2>
 
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Integrate short link generation into your CI/CD pipelines, SMS delivery services,
-              marketing automation engines, and backend applications with our REST API.
+              Automate short link creation directly from your backend services, CI/CD pipelines,
+              or scripts using standard REST requests.
             </p>
 
-            <ul className="space-y-3 text-xs font-medium text-foreground">
+            <ul className="space-y-2.5 text-xs text-foreground font-medium">
               <li className="flex items-center gap-2.5">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
-                  <Check className="h-3 w-3" />
+                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Check className="h-2.5 w-2.5" />
                 </span>
-                <span>Sub-15ms programmatic link generation</span>
+                <span>Simple JSON request & response format</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
-                  <Check className="h-3 w-3" />
+                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Check className="h-2.5 w-2.5" />
                 </span>
-                <span>SHA-256 hashed and revocable API keys</span>
+                <span>Secure SHA-256 hashed API key management</span>
               </li>
               <li className="flex items-center gap-2.5">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
-                  <Check className="h-3 w-3" />
+                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Check className="h-2.5 w-2.5" />
                 </span>
-                <span>Standard RFC rate limiting headers</span>
+                <span>Standard HTTP status codes & rate limiting headers</span>
               </li>
             </ul>
 
             <div className="pt-2">
               <Link href="/docs">
-                <Button variant="outline" className="gap-2 text-xs font-semibold">
-                  <span>Explore API Documentation</span>
+                <Button variant="outline" className="gap-2 text-xs font-semibold h-9 px-4">
+                  <span>View Documentation</span>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Button>
               </Link>
@@ -106,28 +106,28 @@ print(response.json()["data"]["shortUrl"])`,
 
           {/* Right Column: Code Window */}
           <div className="lg:col-span-7">
-            <div className="overflow-hidden rounded-2xl border border-border/80 bg-slate-950 shadow-2xl">
-              {/* Terminal Window Header */}
-              <div className="flex items-center justify-between border-b border-slate-800 bg-slate-900/80 px-4 py-3">
+            <div className="overflow-hidden rounded-xl border border-border bg-slate-950 shadow-sm">
+              {/* Header */}
+              <div className="flex items-center justify-between border-b border-slate-800 bg-slate-900/80 px-4 py-2.5">
                 <div className="flex items-center gap-2">
-                  <div className="h-3 w-3 rounded-full bg-rose-500/80" />
-                  <div className="h-3 w-3 rounded-full bg-amber-500/80" />
-                  <div className="h-3 w-3 rounded-full bg-emerald-500/80" />
+                  <div className="h-2.5 w-2.5 rounded-full bg-rose-500/80" />
+                  <div className="h-2.5 w-2.5 rounded-full bg-amber-500/80" />
+                  <div className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
                   <span className="ml-2 font-mono text-xs text-slate-400 flex items-center gap-1.5">
-                    <Terminal className="h-3.5 w-3.5" />
-                    v1/links.sh
+                    <Terminal className="h-3 w-3" />
+                    api/v1/links
                   </span>
                 </div>
 
                 {/* Tab Switcher */}
-                <div className="flex items-center gap-1 rounded-lg bg-slate-950 p-1 text-[11px] font-mono">
+                <div className="flex items-center gap-1 rounded-md bg-slate-950 p-1 text-[11px] font-mono">
                   {(["curl", "typescript", "python"] as const).map((tab) => (
                     <button
                       key={tab}
                       onClick={() => setActiveTab(tab)}
                       className={`rounded px-2 py-0.5 capitalize transition-all ${
                         activeTab === tab
-                          ? "bg-primary text-white font-bold"
+                          ? "bg-primary text-white font-semibold"
                           : "text-slate-400 hover:text-white"
                       }`}
                     >
@@ -137,12 +137,12 @@ print(response.json()["data"]["shortUrl"])`,
                 </div>
               </div>
 
-              {/* Code Editor Body */}
-              <div className="relative p-5">
-                <div className="absolute right-4 top-4">
+              {/* Code Body */}
+              <div className="relative p-4 sm:p-5">
+                <div className="absolute right-3 top-3">
                   <CopyButton text={codeSnippets[activeTab]} size="iconSm" variant="glass" />
                 </div>
-                <pre className="overflow-x-auto font-mono text-xs leading-relaxed text-indigo-200">
+                <pre className="overflow-x-auto font-mono text-xs leading-relaxed text-slate-200">
                   <code>{codeSnippets[activeTab]}</code>
                 </pre>
               </div>

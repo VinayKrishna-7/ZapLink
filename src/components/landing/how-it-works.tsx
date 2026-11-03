@@ -4,61 +4,60 @@ import { Link2, Sliders, Share2 } from "lucide-react";
 export function LandingHowItWorks() {
   const steps = [
     {
-      number: "01",
+      number: "1",
       icon: Link2,
       title: "Paste your destination URL",
       description:
-        "Input any long URL, landing page, app link, or marketing campaign destination.",
+        "Input any long URL, marketing link, documentation article, or project repository.",
     },
     {
-      number: "02",
+      number: "2",
       icon: Sliders,
-      title: "Customize & brand your link",
+      title: "Customize & brand",
       description:
-        "Add custom slugs, UTM tracking tags, expiration dates, or passwords in seconds.",
+        "Assign a custom alias, add campaign UTM tags, or set optional password and expiration rules.",
     },
     {
-      number: "03",
+      number: "3",
       icon: Share2,
-      title: "Share & track performance",
+      title: "Share and monitor",
       description:
-        "Distribute via social, email, or QR codes and observe real-time click analytics stream in.",
+        "Distribute your link or QR code, then monitor visits, referral sources, and device statistics in your dashboard.",
     },
   ];
 
   return (
-    <section id="how-it-works" className="py-20 md:py-28 relative">
+    <section id="how-it-works" className="py-16 md:py-24">
       <div className="container mx-auto max-w-6xl px-4">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-xs font-bold uppercase tracking-widest text-primary mb-3">
-            Streamlined Workflow
-          </h2>
-          <p className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">
-            How ZapLink Works
+        <div className="text-center max-w-xl mx-auto mb-14">
+          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+            Workflow
           </p>
-          <p className="mt-4 text-muted-foreground text-sm sm:text-base leading-relaxed">
-            Three simple steps to transform messy URLs into high-performing conversion engines.
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
+            How ZapLink works
+          </h2>
+          <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
+            Create, customize, and track your links in three straightforward steps.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {steps.map((step, idx) => {
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {steps.map((step) => {
             const Icon = step.icon;
             return (
               <div
                 key={step.number}
-                className="relative flex flex-col items-center text-center p-8 rounded-3xl border border-border/80 bg-card/40 backdrop-blur-sm transition-all hover:border-primary/40 group"
+                className="relative flex flex-col items-center text-center p-6 rounded-2xl border border-border/80 bg-card hover:border-border transition-colors"
               >
-                {/* Step Number Badge */}
-                <div className="absolute -top-4 font-mono font-extrabold text-xs px-3 py-1 rounded-full bg-primary text-white shadow-md shadow-primary/30">
-                  Step {step.number}
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5">
+                  <Icon className="h-6 w-6" />
                 </div>
 
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-6 ring-8 ring-primary/5 group-hover:scale-110 transition-transform">
-                  <Icon className="h-8 w-8" />
+                <div className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-muted text-[11px] font-mono font-bold text-muted-foreground mb-3">
+                  {step.number}
                 </div>
 
-                <h3 className="text-lg font-bold text-foreground mb-2.5">
+                <h3 className="text-base font-semibold text-foreground mb-2">
                   {step.title}
                 </h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">

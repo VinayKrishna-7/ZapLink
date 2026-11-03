@@ -88,8 +88,8 @@ export default function DocsPage() {
                   The ZapLink REST API is served over HTTPS and communicates via JSON. All requests must use valid Content-Type and Accept headers.
                 </p>
                 <div className="flex items-center justify-between rounded-xl border border-border/80 bg-muted/40 p-3.5 font-mono text-xs">
-                  <span className="text-primary font-bold">https://zaplink.app/api/v1</span>
-                  <CopyButton text="https://zaplink.app/api/v1" size="sm" variant="ghost" />
+                  <span className="text-primary font-bold">https://zaplink-g4ui.onrender.com/api/v1</span>
+                  <CopyButton text="https://zaplink-g4ui.onrender.com/api/v1" size="sm" variant="ghost" />
                 </div>
               </section>
 
@@ -137,7 +137,7 @@ export default function DocsPage() {
                   <div className="flex items-center justify-between border-b border-slate-800 bg-slate-900 px-4 py-2 text-xs font-mono text-slate-400">
                     <span>Request Body</span>
                     <CopyButton
-                      text={`curl -X POST https://zaplink.app/api/v1/links \\
+                      text={`curl -X POST https://zaplink-g4ui.onrender.com/api/v1/links \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{"destinationUrl": "https://example.com/item", "customAlias": "sale"}'`}

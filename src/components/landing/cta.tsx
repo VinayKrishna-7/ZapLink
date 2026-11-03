@@ -1,36 +1,35 @@
 import * as React from "react";
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 
 export function LandingCta() {
   return (
-    <section className="py-20 relative overflow-hidden">
-      <div className="container mx-auto max-w-5xl px-4">
-        <div className="relative rounded-3xl border border-primary/40 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent p-10 sm:p-16 text-center backdrop-blur-xl shadow-2xl glow-purple">
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/20 px-3.5 py-1 text-xs font-semibold text-primary mb-6">
-            <Sparkles className="h-3.5 w-3.5" />
-            <span>Instant Setup &bull; No Credit Card Required</span>
-          </div>
-
-          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground">
-            Ready to create your first link?
-          </h2>
-
-          <p className="mx-auto mt-4 max-w-xl text-sm sm:text-base text-muted-foreground leading-relaxed">
-            Start shortening URLs, tracking click analytics, and generating QR codes in seconds.
+    <section className="py-16 md:py-20 border-t border-border/60">
+      <div className="container mx-auto max-w-4xl px-4">
+        <div className="rounded-2xl border border-border bg-card p-8 sm:p-12 text-center shadow-sm">
+          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
+            Get Started
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Link href="/sign-up" className="w-full sm:w-auto">
-              <Button variant="glow" size="lg" className="w-full sm:w-auto gap-2 font-bold shadow-lg">
-                <span>Get Started Free</span>
+          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-foreground">
+            Ready to shorten and track your links?
+          </h2>
+
+          <p className="mx-auto mt-3 max-w-lg text-sm text-muted-foreground leading-relaxed">
+            Create an account to start creating custom aliases, generating QR codes, and viewing real-time analytics.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/sign-up">
+              <Button size="lg" className="gap-2 font-semibold text-sm h-11 px-6 shadow-sm">
+                <span>Create Free Account</span>
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
-            <Link href="/docs" className="w-full sm:w-auto">
-              <Button variant="outline" size="lg" className="w-full sm:w-auto font-semibold">
-                Explore API Docs
+            <Link href="/docs">
+              <Button variant="outline" size="lg" className="font-semibold text-sm h-11 px-5">
+                <span>Read API Docs</span>
               </Button>
             </Link>
           </div>

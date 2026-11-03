@@ -9,7 +9,6 @@ import { KpiCard } from "../analytics/kpi-card";
 import { Link2, MousePointerClick, Users, TrendingUp } from "lucide-react";
 
 export function LandingAnalyticsPreview() {
-  // Generate sample 30-day data for preview
   const sampleTimeSeries = React.useMemo(() => {
     const data = [];
     const now = new Date();
@@ -26,22 +25,22 @@ export function LandingAnalyticsPreview() {
   }, []);
 
   return (
-    <section id="analytics" className="py-20 md:py-28 bg-muted/20 relative border-y border-border/60">
+    <section id="analytics" className="py-16 md:py-24 bg-muted/30 border-y border-border/60">
       <div className="container mx-auto max-w-6xl px-4">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-xs font-bold uppercase tracking-widest text-primary mb-3">
-            Analytics & Insights
-          </h2>
-          <p className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">
-            Understand your audience with precision
+        <div className="text-center max-w-xl mx-auto mb-12">
+          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+            Analytics
           </p>
-          <p className="mt-4 text-muted-foreground text-sm sm:text-base leading-relaxed">
-            Gain immediate visibility into visitor demographics, device preferences, and referral channels.
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
+            Detailed analytics for every link
+          </h2>
+          <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
+            Monitor click performance, top referrers, device distributions, and geographic locations in real time.
           </p>
         </div>
 
         {/* Dashboard Preview Shell */}
-        <div className="rounded-3xl border border-border/80 bg-card/60 p-4 sm:p-6 shadow-2xl backdrop-blur-xl glow-purple space-y-6">
+        <div className="rounded-2xl border border-border bg-card p-4 sm:p-6 shadow-sm space-y-5">
           {/* KPI Row */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             <KpiCard
@@ -75,7 +74,7 @@ export function LandingAnalyticsPreview() {
             />
           </div>
 
-          {/* Clicks Over Time Interactive Chart */}
+          {/* Clicks Chart */}
           <ClicksChart data={sampleTimeSeries} />
 
           {/* Bottom Grid: Devices, Browsers, Geo */}
