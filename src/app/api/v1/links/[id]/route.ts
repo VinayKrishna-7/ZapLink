@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db/prisma";
-import { redis } from "@/lib/redis/client";
+import { redis, invalidateUserLinksCache } from "@/lib/redis/client";
 import { authenticateApiRequest } from "@/lib/auth/session";
 import { updateLinkSchema } from "@/lib/validation/schemas";
 import { validateDestinationUrl } from "@/lib/security/url-guard";
@@ -161,6 +161,7 @@ export async function PATCH(request: Request, { params }: Params) {
       if (updated.shortCode !== link.shortCode) {
         await redis.del(`link:${updated.shortCode}`);
       }
+      await invalidateUserLinksCache(auth.userId);
     } catch {
       // Ignore cache invalidation error
     }
@@ -213,6 +214,7 @@ export async function DELETE(request: Request, { params }: Params) {
     try {
       await redis.del(`link:${link.shortCode}`);
       if (link.customAlias) await redis.del(`link:${link.customAlias}`);
+      await invalidateUserLinksCache(auth.userId);
     } catch {
       // Ignore cache error
     }

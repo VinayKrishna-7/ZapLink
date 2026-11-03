@@ -95,6 +95,11 @@
   border: 1px solid rgba(225, 29, 72, 0.15);
 }
 
+/* Instant touch and click response */
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 5px;

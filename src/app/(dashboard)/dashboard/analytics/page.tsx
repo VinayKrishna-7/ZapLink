@@ -1,9 +1,32 @@
 "use client";
 
 import * as React from "react";
-import { ClicksChart } from "@/components/analytics/clicks-chart";
-import { DeviceChart } from "@/components/analytics/device-chart";
-import { BrowserChart } from "@/components/analytics/browser-chart";
+import dynamic from "next/dynamic";
+
+const ClicksChart = dynamic(
+  () => import("@/components/analytics/clicks-chart").then((m) => m.ClicksChart),
+  {
+    ssr: false,
+    loading: () => <div className="h-64 sm:h-72 w-full animate-pulse bg-muted/30 rounded-2xl" />,
+  }
+);
+
+const DeviceChart = dynamic(
+  () => import("@/components/analytics/device-chart").then((m) => m.DeviceChart),
+  {
+    ssr: false,
+    loading: () => <div className="h-64 w-full animate-pulse bg-muted/30 rounded-2xl" />,
+  }
+);
+
+const BrowserChart = dynamic(
+  () => import("@/components/analytics/browser-chart").then((m) => m.BrowserChart),
+  {
+    ssr: false,
+    loading: () => <div className="h-64 w-full animate-pulse bg-muted/30 rounded-2xl" />,
+  }
+);
+
 import { GeoList } from "@/components/analytics/geo-list";
 import { ReferrerList } from "@/components/analytics/referrer-list";
 import { KpiCard } from "@/components/analytics/kpi-card";

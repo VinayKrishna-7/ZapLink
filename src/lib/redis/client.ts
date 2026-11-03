@@ -87,4 +87,20 @@ if (process.env.NODE_ENV !== "production") {
   globalThis.redisClient = redis;
 }
 
+export async function invalidateUserLinksCache(userId: string): Promise<void> {
+  try {
+    await redis.incr(`user_links_v:${userId}`);
+  } catch {
+    // Non-blocking
+  }
+}
+
+export async function getUserLinksVersion(userId: string): Promise<string> {
+  try {
+    return (await redis.get(`user_links_v:${userId}`)) || "1";
+  } catch {
+    return "1";
+  }
+}
+
 export default redis;

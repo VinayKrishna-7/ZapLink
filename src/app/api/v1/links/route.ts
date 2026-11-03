@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db/prisma";
-import { redis } from "@/lib/redis/client";
+import { redis, invalidateUserLinksCache, getUserLinksVersion } from "@/lib/redis/client";
 import { authenticateApiRequest } from "@/lib/auth/session";
 import { createLinkSchema } from "@/lib/validation/schemas";
 import { validateDestinationUrl } from "@/lib/security/url-guard";
@@ -186,6 +186,7 @@ export async function POST(request: Request) {
         hasPassword: !!link.passwordHash,
       });
       await redis.set(`link:${shortCode}`, cachePayload, "EX", 3600 * 24); // 24h cache
+      await invalidateUserLinksCache(auth.userId);
     } catch {
       // Non-blocking cache error
     }
@@ -236,6 +237,20 @@ export async function GET(request: Request) {
   const tag = searchParams.get("tag");
 
   const skip = (page - 1) * limit;
+
+  const version = await getUserLinksVersion(auth.userId);
+  const cacheKey = `user_links:${auth.userId}:v${version}:${page}:${limit}:${status || "all"}:${search || "all"}:${tag || "all"}`;
+
+  try {
+    const cached = await redis.get(cacheKey);
+    if (cached) {
+      return NextResponse.json(JSON.parse(cached), {
+        headers: { "X-Cache": "HIT" },
+      });
+    }
+  } catch {
+    // Non-blocking cache fallback
+  }
 
   try {
     const whereClause: Record<string, unknown> = {
@@ -294,7 +309,7 @@ export async function GET(request: Request) {
       tags: l.tags.map((t) => ({ id: t.tag.id, name: t.tag.name, color: t.tag.color })),
     }));
 
-    return NextResponse.json({
+    const responsePayload = {
       success: true,
       data: formattedLinks,
       pagination: {
@@ -303,6 +318,16 @@ export async function GET(request: Request) {
         total,
         totalPages: Math.ceil(total / limit),
       },
+    };
+
+    try {
+      await redis.set(cacheKey, JSON.stringify(responsePayload), "EX", 60);
+    } catch {
+      // Non-blocking
+    }
+
+    return NextResponse.json(responsePayload, {
+      headers: { "X-Cache": "MISS" },
     });
   } catch (error) {
     console.error("[GET_LINKS_ERROR]", error);

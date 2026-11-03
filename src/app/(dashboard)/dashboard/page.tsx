@@ -25,14 +25,15 @@ import {
 import Link from "next/link";
 import { getShortUrl, formatNumber, formatRelativeTime } from "@/lib/utils";
 import { useLinks, invalidateLinksCache } from "@/lib/use-links";
-import {
-  AreaChart,
-  Area,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+import dynamic from "next/dynamic";
+
+const SparklineChart = dynamic(
+  () => import("@/components/dashboard/sparkline-chart"),
+  {
+    ssr: false,
+    loading: () => <div className="h-32 sm:h-36 w-full animate-pulse bg-muted/40 rounded-xl" />,
+  }
+);
 
 export default function DashboardPage() {
   const { data: session } = useSession();
@@ -246,38 +247,7 @@ export default function DashboardPage() {
           </Link>
         </div>
 
-        <div className="h-32 sm:h-36 w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={sparklineData} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
-              <defs>
-                <linearGradient id="dashboardSparkGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="currentColor" stopOpacity={0.25} />
-                  <stop offset="95%" stopColor="currentColor" stopOpacity={0} />
-                </linearGradient>
-              </defs>
-              <XAxis dataKey="date" stroke="currentColor" opacity={0.5} fontSize={10} tickLine={false} />
-              <YAxis stroke="currentColor" opacity={0.5} fontSize={10} tickLine={false} allowDecimals={false} />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: "hsl(var(--card))",
-                  borderColor: "hsl(var(--border))",
-                  borderRadius: "0.5rem",
-                  color: "hsl(var(--foreground))",
-                  fontSize: "11px",
-                  padding: "6px 10px",
-                }}
-              />
-              <Area
-                type="monotone"
-                dataKey="clicks"
-                stroke="currentColor"
-                strokeWidth={2}
-                fillOpacity={1}
-                fill="url(#dashboardSparkGradient)"
-              />
-            </AreaChart>
-          </ResponsiveContainer>
-        </div>
+        <SparklineChart data={sparklineData} />
       </Card>
 
       {/* Your Links Overview Table Preview */}
