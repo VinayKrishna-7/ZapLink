@@ -34,32 +34,32 @@
   }
 
   .dark {
-    --background: 0 0% 0%; /* Full high dark / Pitch black */
+    --background: 0 0% 0%; /* Full high dark / Pure pitch black #000000 */
     --foreground: 356 100% 97%; /* #FFF1F2 Rose Silk text */
-    --card: 338 29% 6%; /* #120A0D Wine Charcoal */
+    --card: 0 0% 4%; /* #0A0A0A Full dark obsidian */
     --card-foreground: 356 100% 97%;
-    --popover: 338 29% 6%;
+    --popover: 0 0% 4%;
     --popover-foreground: 356 100% 97%;
     --primary: 347 77% 50%; /* #E11D48 Deep Ruby button */
     --primary-foreground: 356 100% 97%;
     --primary-hover: 345 82% 44%; /* #C7143F */
-    --secondary: 341 33% 9%; /* #201015 Deep burgundy */
+    --secondary: 0 0% 8%; /* #141414 */
     --secondary-foreground: 356 100% 97%;
-    --muted: 341 33% 9%;
-    --muted-foreground: 345 20% 74%; /* Crisp, clear readable text */
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 65%; /* Crisp, clear readable text */
     --accent: 347 77% 50%; /* #E11D48 Deep Ruby */
     --accent-foreground: 356 100% 97%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 356 100% 97%;
-    --border: 343 36% 14%; /* #2D151C Subtle wine border */
-    --input: 343 36% 14%;
+    --border: 0 0% 13%; /* #212121 Full dark border */
+    --input: 0 0% 13%;
     --ring: 347 77% 50%; /* #E11D48 */
 
     --chart-1: 347 77% 50%; /* #E11D48 Deep Ruby */
     --chart-2: 345 82% 41%; /* #BE123C Bordeaux */
     --chart-3: 356 100% 97%; /* #FFF1F2 Rose Silk */
-    --chart-4: 341 14% 60%; /* #A88B94 */
-    --chart-5: 341 33% 9%; /* #201015 */
+    --chart-4: 0 0% 65%;
+    --chart-5: 0 0% 12%;
   }
 }
 
@@ -68,6 +68,7 @@
     @apply border-border;
   }
   html {
+    @apply bg-background text-foreground;
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -81,12 +82,10 @@
   }
 }
 
-/* Luxury wine & ruby card layers */
+/* Neutral dark card layers */
 .glassmorphism {
-  background: rgba(18, 10, 13, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(225, 29, 72, 0.15);
+  background: rgba(10, 10, 10, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glassmorphism-light {

@@ -129,7 +129,7 @@ export default function DashboardPage() {
       </div>
 
       {/* Quick Shorten Card */}
-      <Card className="w-full p-3.5 sm:p-4 border-primary/30 bg-primary/5">
+      <Card className="w-full p-3.5 sm:p-4 border-border bg-card">
         <div className="flex items-center justify-between mb-2.5">
           <div className="flex items-center gap-1.5">
             <Link2 className="h-3.5 w-3.5 text-primary" />
