@@ -313,7 +313,7 @@ export default function DashboardPage() {
               return (
                 <div
                   key={link.id}
-                  className="py-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs hover:bg-accent/30 rounded-lg px-2 -mx-2 transition-colors"
+                  className="py-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs hover:bg-muted/60 rounded-lg px-2 transition-colors"
                 >
                   <div className="space-y-0.5 overflow-hidden">
                     <div className="flex items-center gap-2">

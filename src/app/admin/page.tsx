@@ -349,7 +349,7 @@ export default function AdminDashboardPage() {
               </thead>
               <tbody className="divide-y divide-border/40 font-medium">
                 {users.map((u) => (
-                  <tr key={u.id} className="hover:bg-accent/40">
+                  <tr key={u.id} className="hover:bg-muted/50 transition-colors">
                     <td className="py-3 px-3 font-bold text-foreground">{u.name || "Unnamed"}</td>
                     <td className="py-3 px-3 font-mono text-muted-foreground">{u.email}</td>
                     <td className="py-3 px-3">

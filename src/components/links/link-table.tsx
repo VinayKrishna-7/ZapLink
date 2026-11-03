@@ -247,7 +247,7 @@ export function LinkTable({
                 return (
                   <tr
                     key={link.id}
-                    className="hover:bg-accent/40 transition-colors group"
+                    className="hover:bg-muted/50 transition-colors group"
                   >
                     {/* Short Link */}
                     <td className="py-3.5 px-3">
@@ -363,7 +363,7 @@ export function LinkTable({
                                   setEditModalLink(link);
                                   setActiveMenuId(null);
                                 }}
-                                className="flex w-full items-center gap-2 rounded-lg px-2.5 py-1.5 text-foreground hover:bg-accent"
+                                className="flex w-full items-center gap-2 rounded-lg px-2.5 py-1.5 text-foreground hover:bg-muted transition-colors"
                               >
                                 <Edit2 className="h-3.5 w-3.5" />
                                 <span>Edit Link</span>
@@ -373,7 +373,7 @@ export function LinkTable({
                                   handleToggleStatus(link);
                                   setActiveMenuId(null);
                                 }}
-                                className="flex w-full items-center gap-2 rounded-lg px-2.5 py-1.5 text-foreground hover:bg-accent"
+                                className="flex w-full items-center gap-2 rounded-lg px-2.5 py-1.5 text-foreground hover:bg-muted transition-colors"
                               >
                                 {link.status === "ACTIVE" ? (
                                   <>

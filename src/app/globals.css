@@ -17,8 +17,8 @@
     --secondary-foreground: 220 25% 10%;
     --muted: 220 12% 84%;
     --muted-foreground: 220 10% 36%; /* #545B69 High contrast readable text */
-    --accent: 347 77% 50%; /* #E11D48 */
-    --accent-foreground: 356 100% 97%;
+    --accent: 220 12% 84%; /* #D2D5DC Architectural cement hover */
+    --accent-foreground: 220 25% 10%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
     --border: 220 12% 78%; /* #C1C5CE Clean cement border */
@@ -47,8 +47,8 @@
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 10%;
     --muted-foreground: 0 0% 68%; /* #ADADAD High readability clear neutral text */
-    --accent: 347 77% 50%; /* #E11D48 */
-    --accent-foreground: 356 100% 97%;
+    --accent: 0 0% 12%; /* #1F1F1F Deep obsidian dark subtle hover */
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 14%; /* #242424 Full dark border */

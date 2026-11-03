@@ -63,7 +63,7 @@ export default function RecentLinksPage() {
               return (
                 <div
                   key={link.id}
-                  className="flex flex-col sm:flex-row sm:items-center justify-between py-4 gap-3 text-xs hover:bg-accent/30 rounded-xl px-2 -mx-2 transition-colors"
+                  className="flex flex-col sm:flex-row sm:items-center justify-between py-3.5 gap-3 text-xs hover:bg-muted/70 rounded-xl px-3 transition-colors"
                 >
                   <div className="space-y-1 overflow-hidden">
                     <div className="flex items-center gap-2">

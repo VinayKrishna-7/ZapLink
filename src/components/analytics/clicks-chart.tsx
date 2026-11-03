@@ -84,30 +84,30 @@ export function ClicksChart({
         <div className="flex items-center rounded-lg border border-border/80 bg-muted/40 p-0.5 text-xs font-medium">
           <button
             onClick={() => setRange("7d")}
-            className={`rounded-md px-2 py-0.5 text-xs transition-all ${
+            className={`rounded-md px-2.5 py-0.5 text-xs transition-all ${
               range === "7d"
-                ? "bg-primary text-primary-foreground shadow-sm"
-                : "text-muted-foreground hover:text-foreground"
+                ? "bg-foreground/10 text-foreground font-semibold border border-foreground/15 shadow-sm"
+                : "text-muted-foreground hover:bg-muted/60 hover:text-foreground"
             }`}
           >
             7D
           </button>
           <button
             onClick={() => setRange("30d")}
-            className={`rounded-md px-2 py-0.5 text-xs transition-all ${
+            className={`rounded-md px-2.5 py-0.5 text-xs transition-all ${
               range === "30d"
-                ? "bg-primary text-primary-foreground shadow-sm"
-                : "text-muted-foreground hover:text-foreground"
+                ? "bg-foreground/10 text-foreground font-semibold border border-foreground/15 shadow-sm"
+                : "text-muted-foreground hover:bg-muted/60 hover:text-foreground"
             }`}
           >
             30D
           </button>
           <button
             onClick={() => setRange("all")}
-            className={`rounded-md px-2 py-0.5 text-xs transition-all ${
+            className={`rounded-md px-2.5 py-0.5 text-xs transition-all ${
               range === "all"
-                ? "bg-primary text-primary-foreground shadow-sm"
-                : "text-muted-foreground hover:text-foreground"
+                ? "bg-foreground/10 text-foreground font-semibold border border-foreground/15 shadow-sm"
+                : "text-muted-foreground hover:bg-muted/60 hover:text-foreground"
             }`}
           >
             All
