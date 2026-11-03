@@ -4,62 +4,62 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 0 0% 22%;
-    --secondary: 0 0% 94%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 0 0% 94%;
-    --accent-foreground: 0 0% 9%;
+    --background: 40 31% 94%; /* #F5F2EC Main background */
+    --foreground: 0 0% 10%; /* #191919 Primary text */
+    --card: 38 26% 88%; /* #E8E2D8 Secondary background */
+    --card-foreground: 0 0% 10%;
+    --popover: 38 26% 88%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 0 0% 15%; /* #252525 Primary buttons */
+    --primary-foreground: 40 31% 94%; /* #F5F2EC */
+    --primary-hover: 0 0% 24%;
+    --secondary: 38 26% 88%; /* #E8E2D8 */
+    --secondary-foreground: 0 0% 10%;
+    --muted: 38 26% 88%; /* #E8E2D8 */
+    --muted-foreground: 36 4% 45%; /* #77736D Secondary text */
+    --accent: 34 28% 53%; /* #A88B64 Accent */
+    --accent-foreground: 40 31% 94%;
     --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 89%;
-    --input: 0 0% 89%;
-    --ring: 0 0% 15%;
+    --destructive-foreground: 40 31% 94%;
+    --border: 37 20% 83%; /* #DCD5CA Borders */
+    --input: 37 20% 83%; /* #DCD5CA */
+    --ring: 34 28% 53%; /* #A88B64 */
     --radius: 0.5rem;
 
-    --chart-1: 0 0% 15%;
-    --chart-2: 0 0% 40%;
-    --chart-3: 0 0% 60%;
-    --chart-4: 0 0% 75%;
-    --chart-5: 0 0% 88%;
+    --chart-1: 34 28% 53%; /* #A88B64 Accent */
+    --chart-2: 0 0% 15%; /* #252525 */
+    --chart-3: 36 4% 45%; /* #77736D */
+    --chart-4: 37 20% 83%; /* #DCD5CA */
+    --chart-5: 38 26% 88%; /* #E8E2D8 */
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 4%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 4%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 4%;
-    --primary-hover: 0 0% 88%;
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 9%;
-    --muted-foreground: 0 0% 60%;
-    --accent: 0 0% 12%;
-    --accent-foreground: 0 0% 98%;
+    --background: 0 0% 0%; /* Full high dark */
+    --foreground: 40 31% 94%; /* #F5F2EC Primary text */
+    --card: 30 8% 6%; /* #12110F Deep black with sand undertone */
+    --card-foreground: 40 31% 94%;
+    --popover: 30 8% 6%;
+    --popover-foreground: 40 31% 94%;
+    --primary: 40 31% 94%; /* #F5F2EC Sand button in dark mode */
+    --primary-foreground: 0 0% 10%; /* #191919 */
+    --primary-hover: 38 26% 88%; /* #E8E2D8 */
+    --secondary: 30 8% 12%;
+    --secondary-foreground: 40 31% 94%;
+    --muted: 30 8% 10%;
+    --muted-foreground: 36 8% 60%; /* Warm secondary text */
+    --accent: 34 28% 53%; /* #A88B64 Accent */
+    --accent-foreground: 0 0% 10%;
     --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 0 0% 80%;
+    --destructive-foreground: 40 31% 94%;
+    --border: 36 8% 16%; /* #2B2824 Warm dark border */
+    --input: 36 8% 16%;
+    --ring: 34 28% 53%; /* #A88B64 Accent */
 
-    --chart-1: 0 0% 98%;
-    --chart-2: 0 0% 75%;
-    --chart-3: 0 0% 55%;
-    --chart-4: 0 0% 35%;
-    --chart-5: 0 0% 20%;
+    --chart-1: 34 28% 53%; /* #A88B64 Accent */
+    --chart-2: 40 31% 94%; /* #F5F2EC Sand */
+    --chart-3: 38 26% 88%; /* #E8E2D8 */
+    --chart-4: 36 8% 60%;
+    --chart-5: 30 8% 16%;
   }
 }
 
@@ -83,17 +83,17 @@
 
 /* Crisp neutral card layers */
 .glassmorphism {
-  background: rgba(10, 10, 10, 0.85);
+  background: rgba(18, 17, 15, 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(220, 213, 202, 0.12);
 }
 
 .glassmorphism-light {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(245, 242, 236, 0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(220, 213, 202, 0.6);
 }
 
 /* Custom Scrollbar */

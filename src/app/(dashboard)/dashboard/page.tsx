@@ -142,7 +142,7 @@ export default function DashboardPage() {
           onClick={() => setCreateModalOpen(true)}
           className="gap-2 self-start sm:self-auto font-semibold text-xs shadow-md shadow-primary/25 h-9 px-4 shrink-0"
         >
-          <Sparkles className="h-4 w-4 text-white" />
+          <Sparkles className="h-4 w-4" />
           <span>Create Link</span>
         </Button>
       </div>
@@ -270,18 +270,18 @@ export default function DashboardPage() {
             <AreaChart data={sparklineData} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
               <defs>
                 <linearGradient id="dashboardSparkGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#ffffff" stopOpacity={0.25} />
-                  <stop offset="95%" stopColor="#ffffff" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#A88B64" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#A88B64" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <XAxis dataKey="date" stroke="#71717a" fontSize={10} tickLine={false} />
-              <YAxis stroke="#71717a" fontSize={10} tickLine={false} allowDecimals={false} />
+              <XAxis dataKey="date" stroke="#77736D" fontSize={10} tickLine={false} />
+              <YAxis stroke="#77736D" fontSize={10} tickLine={false} allowDecimals={false} />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: "rgba(10, 10, 10, 0.95)",
-                  borderColor: "rgba(255, 255, 255, 0.1)",
+                  backgroundColor: "rgba(25, 25, 25, 0.95)",
+                  borderColor: "rgba(220, 213, 202, 0.2)",
                   borderRadius: "0.5rem",
-                  color: "#fff",
+                  color: "#F5F2EC",
                   fontSize: "11px",
                   padding: "6px 10px",
                 }}
@@ -289,7 +289,7 @@ export default function DashboardPage() {
               <Area
                 type="monotone"
                 dataKey="clicks"
-                stroke="#ffffff"
+                stroke="#A88B64"
                 strokeWidth={2}
                 fillOpacity={1}
                 fill="url(#dashboardSparkGradient)"

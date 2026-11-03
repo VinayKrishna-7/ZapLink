@@ -86,7 +86,7 @@ export function ClicksChart({
             onClick={() => setRange("7d")}
             className={`rounded-md px-2 py-0.5 text-xs transition-all ${
               range === "7d"
-                ? "bg-primary text-white shadow-sm"
+                ? "bg-primary text-primary-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
@@ -96,7 +96,7 @@ export function ClicksChart({
             onClick={() => setRange("30d")}
             className={`rounded-md px-2 py-0.5 text-xs transition-all ${
               range === "30d"
-                ? "bg-primary text-white shadow-sm"
+                ? "bg-primary text-primary-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
@@ -106,7 +106,7 @@ export function ClicksChart({
             onClick={() => setRange("all")}
             className={`rounded-md px-2 py-0.5 text-xs transition-all ${
               range === "all"
-                ? "bg-primary text-white shadow-sm"
+                ? "bg-primary text-primary-foreground shadow-sm"
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
@@ -125,18 +125,18 @@ export function ClicksChart({
             <AreaChart data={filteredData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <defs>
                 <linearGradient id="clicksGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#ffffff" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#ffffff" stopOpacity={0.0} />
+                  <stop offset="5%" stopColor="#A88B64" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#A88B64" stopOpacity={0.0} />
                 </linearGradient>
                 <linearGradient id="visitorsGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#888888" stopOpacity={0.2} />
-                  <stop offset="95%" stopColor="#888888" stopOpacity={0.0} />
+                  <stop offset="5%" stopColor="#77736D" stopOpacity={0.2} />
+                  <stop offset="95%" stopColor="#77736D" stopOpacity={0.0} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(148, 163, 184, 0.1)" vertical={false} />
               <XAxis
                 dataKey="date"
-                stroke="#71717a"
+                stroke="#77736D"
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
@@ -150,7 +150,7 @@ export function ClicksChart({
                 }}
               />
               <YAxis
-                stroke="#71717a"
+                stroke="#77736D"
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
@@ -160,7 +160,7 @@ export function ClicksChart({
               <Area
                 type="monotone"
                 dataKey="clicks"
-                stroke="#ffffff"
+                stroke="#A88B64"
                 strokeWidth={2.5}
                 fillOpacity={1}
                 fill="url(#clicksGrad)"
@@ -169,7 +169,7 @@ export function ClicksChart({
               <Area
                 type="monotone"
                 dataKey="uniqueVisitors"
-                stroke="#888888"
+                stroke="#77736D"
                 strokeWidth={2}
                 fillOpacity={1}
                 fill="url(#visitorsGrad)"

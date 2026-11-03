@@ -68,8 +68,8 @@ print(res.json()["data"]["shortUrl"])`,
                   onClick={() => setActiveTab(tab)}
                   className={`rounded px-2 py-0.5 capitalize transition-colors ${
                     activeTab === tab
-                      ? "bg-primary text-white font-semibold"
-                      : "text-slate-400 hover:text-white"
+                      ? "bg-primary text-primary-foreground font-semibold"
+                      : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
                   {tab}

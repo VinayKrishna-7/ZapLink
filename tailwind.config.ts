@@ -68,8 +68,8 @@ const config: Config = {
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         glow: {
-          "0%": { boxShadow: "0 0 15px rgba(255, 255, 255, 0.05)" },
-          "100%": { boxShadow: "0 0 25px rgba(255, 255, 255, 0.12)" },
+          "0%": { boxShadow: "0 0 15px rgba(168, 139, 100, 0.08)" },
+          "100%": { boxShadow: "0 0 25px rgba(168, 139, 100, 0.18)" },
         },
       },
     },

@@ -72,7 +72,7 @@ export default function GlobalAnalyticsPage() {
               onClick={() => setTimeRange(r)}
               className={`rounded-lg px-3 py-1.5 font-semibold transition-all ${
                 timeRange === r
-                  ? "bg-primary text-white shadow-sm"
+                  ? "bg-primary text-primary-foreground shadow-sm"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
