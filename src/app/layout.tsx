@@ -21,9 +21,7 @@ export const metadata: Metadata = {
   description:
     "Fast, secure URL shortener SaaS with real-time analytics, instant QR codes, and audience insights.",
   icons: {
-    icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
+    icon: "/icon.svg",
     shortcut: "/icon.svg",
     apple: "/icon.svg",
   },
