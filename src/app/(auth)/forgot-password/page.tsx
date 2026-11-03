@@ -27,21 +27,21 @@ export default function ForgotPasswordPage() {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-4 relative overflow-hidden bg-background">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl pointer-events-none -z-10" />
+
 
       <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-md">
         <div className="flex justify-center mb-8">
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-tr from-primary to-cyan-400 text-white shadow-lg shadow-primary/30">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
               <Zap className="h-6 w-6" />
             </div>
             <span className="font-extrabold text-2xl tracking-tight text-foreground">
-              Zap<span className="text-primary">Link</span>
+              ZapLink
             </span>
           </Link>
         </div>
 
-        <Card className="p-6 backdrop-blur-xl shadow-2xl border-border/80 glow-purple">
+        <Card className="p-6 backdrop-blur-xl shadow-2xl border-border">
           <CardHeader className="p-0 pb-6 text-center">
             <CardTitle className="text-2xl font-bold">Reset your password</CardTitle>
             <CardDescription className="text-xs mt-1">

@@ -58,7 +58,7 @@ function UnlockContent() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-4 relative overflow-hidden bg-background">
       {/* Glow effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+
 
       <motion.div
         initial={{ opacity: 0, y: 15 }}
@@ -67,16 +67,16 @@ function UnlockContent() {
       >
         <div className="flex justify-center mb-8">
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-tr from-primary to-cyan-400 text-white shadow-lg shadow-primary/30">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
               <Zap className="h-6 w-6" />
             </div>
             <span className="font-extrabold text-xl tracking-tight text-foreground">
-              Zap<span className="text-primary">Link</span>
+              ZapLink
             </span>
           </Link>
         </div>
 
-        <Card className="p-6 backdrop-blur-xl shadow-2xl border-border/80 glow-purple">
+        <Card className="p-6 backdrop-blur-xl shadow-2xl border-border">
           <CardHeader className="p-0 pb-5 text-center">
             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-3 ring-8 ring-amber-500/5">
               <Lock className="h-7 w-7" />

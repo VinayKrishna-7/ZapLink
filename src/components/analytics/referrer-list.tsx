@@ -26,7 +26,7 @@ export function ReferrerList({ data }: ReferrerListProps) {
     <Card className="p-6">
       <CardHeader className="p-0 pb-4">
         <div className="flex items-center gap-2">
-          <Compass className="h-4 w-4 text-indigo-400" />
+          <Compass className="h-4 w-4 text-foreground" />
           <CardTitle className="text-base font-bold">Top Referrers</CardTitle>
         </div>
         <CardDescription className="text-xs">Traffic channels & referring sites</CardDescription>

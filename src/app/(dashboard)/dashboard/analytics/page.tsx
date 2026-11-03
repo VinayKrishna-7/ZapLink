@@ -88,13 +88,13 @@ export default function GlobalAnalyticsPage() {
           title="Total Recorded Clicks"
           value={totalClicks}
           icon={MousePointerClick}
-          iconColor="text-indigo-400 bg-indigo-500/15"
+          iconColor="text-foreground bg-muted"
         />
         <KpiCard
           title="Unique Visitors"
           value={uniqueVisitors}
           icon={Users}
-          iconColor="text-cyan-400 bg-cyan-500/15"
+          iconColor="text-foreground bg-muted"
         />
         <KpiCard
           title="Avg Unique CTR"

@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0b0f19",
+  themeColor: "#000000",
   width: "device-width",
   initialScale: 1,
 };
@@ -37,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased bg-background text-foreground min-h-screen selection:bg-primary/20 selection:text-primary`}>
+      <body className={`${inter.variable} font-sans antialiased bg-background text-foreground min-h-screen selection:bg-foreground selection:text-background`}>
         <AuthProvider>
           <ThemeProvider>
             <ToastProvider>

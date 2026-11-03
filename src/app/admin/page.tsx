@@ -190,13 +190,13 @@ export default function AdminDashboardPage() {
           title="Registered Users"
           value={users.length}
           icon={Users}
-          iconColor="text-indigo-400 bg-indigo-500/10"
+          iconColor="text-foreground bg-muted"
         />
         <KpiCard
           title="Total Short Links"
           value={links.length}
           icon={Link2}
-          iconColor="text-cyan-400 bg-cyan-500/10"
+          iconColor="text-foreground bg-muted"
         />
         <KpiCard
           title="Total Clicks"
@@ -242,7 +242,7 @@ export default function AdminDashboardPage() {
           onClick={() => setActiveTab("links")}
           className={`flex items-center gap-2 rounded-xl px-4 py-2 text-xs font-bold transition-all ${
             activeTab === "links"
-              ? "bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
+              ? "bg-primary/10 text-primary border border-border"
               : "text-muted-foreground hover:bg-muted hover:text-foreground"
           }`}
         >

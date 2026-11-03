@@ -73,13 +73,13 @@ export function Sidebar({
           onClick={handleNavClick}
           className="flex items-center gap-2.5 overflow-hidden"
         >
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-tr from-primary to-cyan-400 text-white shadow-md shadow-primary/30">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
             <Zap className="h-5 w-5" />
           </div>
           {(!collapsed || isMobile) && (
             <div className="flex flex-col">
               <span className="font-extrabold text-base tracking-tight text-foreground">
-                Zap<span className="text-primary">Link</span>
+                ZapLink
               </span>
             </div>
           )}

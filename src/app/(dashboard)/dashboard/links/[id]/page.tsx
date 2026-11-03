@@ -157,14 +157,14 @@ export default function LinkDetailPage() {
           value={analytics?.summary?.totalClicks || link.clickCount || 0}
           change={12.5}
           icon={MousePointerClick}
-          iconColor="text-indigo-400 bg-indigo-500/10"
+          iconColor="text-foreground bg-muted"
         />
         <KpiCard
           title="Unique Visitors"
           value={analytics?.summary?.uniqueVisitors || Math.floor(link.clickCount * 0.8) || 0}
           change={9.4}
           icon={Users}
-          iconColor="text-cyan-400 bg-cyan-500/10"
+          iconColor="text-foreground bg-muted"
         />
         <KpiCard
           title="Conversion Rate"

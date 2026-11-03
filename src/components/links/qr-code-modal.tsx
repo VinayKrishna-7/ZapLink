@@ -23,7 +23,7 @@ export function QrCodeModal({
 }: QrCodeModalProps) {
   const [dataUrl, setDataUrl] = React.useState<string>("");
   const [svgString, setSvgString] = React.useState<string>("");
-  const [darkColor, setDarkColor] = React.useState<string>("#0f172a");
+  const [darkColor, setDarkColor] = React.useState<string>("#000000");
   const [lightColor, setLightColor] = React.useState<string>("#ffffff");
   const [size, setSize] = React.useState<number>(512);
   const [showOptions, setShowOptions] = React.useState<boolean>(false);
@@ -84,11 +84,11 @@ export function QrCodeModal({
   };
 
   const presetColors = [
-    { name: "Default Navy", dark: "#0f172a", light: "#ffffff" },
-    { name: "Electric Indigo", dark: "#4f46e5", light: "#ffffff" },
-    { name: "Cyan Teal", dark: "#0891b2", light: "#ffffff" },
-    { name: "Emerald", dark: "#059669", light: "#ffffff" },
-    { name: "Dark Velvet", dark: "#1e1b4b", light: "#e0e7ff" },
+    { name: "Monochrome Black", dark: "#000000", light: "#ffffff" },
+    { name: "Charcoal Slate", dark: "#18181b", light: "#ffffff" },
+    { name: "Neutral Inverted", dark: "#ffffff", light: "#000000" },
+    { name: "Soft Grey", dark: "#27272a", light: "#f4f4f5" },
+    { name: "Steel", dark: "#3f3f46", light: "#ffffff" },
   ];
 
   return (

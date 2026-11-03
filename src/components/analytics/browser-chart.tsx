@@ -15,7 +15,7 @@ interface BrowserChartProps {
   data: BrowserData[];
 }
 
-const BAR_COLORS = ["#6366f1", "#06b6d4", "#f59e0b", "#10b981", "#ec4899"];
+const BAR_COLORS = ["#ffffff", "#d4d4d8", "#a1a1aa", "#71717a", "#52525b"];
 
 export function BrowserChart({ data }: BrowserChartProps) {
   const chartData = data && data.length > 0 ? data : [
@@ -29,7 +29,7 @@ export function BrowserChart({ data }: BrowserChartProps) {
     <Card className="p-6 flex flex-col justify-between">
       <CardHeader className="p-0 pb-2">
         <div className="flex items-center gap-2">
-          <Globe className="h-4 w-4 text-indigo-400" />
+          <Globe className="h-4 w-4 text-foreground" />
           <CardTitle className="text-base font-bold">Browsers</CardTitle>
         </div>
         <CardDescription className="text-xs">Client software distribution</CardDescription>
@@ -42,7 +42,7 @@ export function BrowserChart({ data }: BrowserChartProps) {
             <YAxis
               type="category"
               dataKey="name"
-              stroke="#64748b"
+              stroke="#71717a"
               fontSize={11}
               tickLine={false}
               axisLine={false}
@@ -50,7 +50,7 @@ export function BrowserChart({ data }: BrowserChartProps) {
             <Tooltip
               formatter={(value: number) => [`${value} clicks`, "Traffic"]}
               contentStyle={{
-                backgroundColor: "rgba(15, 23, 42, 0.95)",
+                backgroundColor: "rgba(10, 10, 10, 0.95)",
                 borderColor: "rgba(255, 255, 255, 0.1)",
                 borderRadius: "0.75rem",
                 fontSize: "12px",

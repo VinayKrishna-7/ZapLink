@@ -3,7 +3,7 @@ import { LandingHero } from "@/components/landing/hero";
 import { LandingFooter } from "@/components/landing/footer";
 
 export const metadata = {
-  title: "ZapLink — Open Source URL Shortener & Analytics",
+  title: "ZapLink — Simple Fast URL Shortener & Analytics",
   description:
     "Simple, fast URL shortener with real-time click tracking, custom aliases, and instant QR codes.",
 };

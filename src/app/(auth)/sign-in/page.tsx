@@ -29,7 +29,7 @@ function SignInForm() {
   // If already authenticated with a session
   if (status === "authenticated" && session?.user) {
     return (
-      <Card className="p-6 backdrop-blur-xl shadow-2xl border-border glow-purple animate-fade-in">
+      <Card className="p-6 backdrop-blur-xl shadow-2xl border-border animate-fade-in">
         <CardHeader className="p-0 pb-5 text-center">
           <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/20">
             <UserCheck className="h-6 w-6" />
@@ -110,7 +110,7 @@ function SignInForm() {
   };
 
   return (
-    <Card className="p-6 backdrop-blur-xl shadow-2xl border-border glow-purple">
+    <Card className="p-6 backdrop-blur-xl shadow-2xl border-border">
       <CardHeader className="p-0 pb-6 text-center">
         <CardTitle className="text-2xl font-bold">Sign In to ZapLink</CardTitle>
         <CardDescription className="text-xs mt-1">
@@ -219,7 +219,7 @@ function SignInForm() {
 export default function SignInPage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-4 relative overflow-hidden bg-background">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl pointer-events-none -z-10" />
+
 
       <motion.div
         initial={{ opacity: 0, y: 15 }}
@@ -228,11 +228,11 @@ export default function SignInPage() {
       >
         <div className="flex justify-center mb-8">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-tr from-primary to-cyan-400 text-white shadow-lg shadow-primary/30 group-hover:scale-105 transition-transform">
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
               <Zap className="h-6 w-6" />
             </div>
             <span className="font-extrabold text-2xl tracking-tight text-foreground">
-              Zap<span className="text-primary">Link</span>
+              ZapLink
             </span>
           </Link>
         </div>

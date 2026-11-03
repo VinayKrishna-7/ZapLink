@@ -15,7 +15,7 @@ interface DeviceChartProps {
   data: DeviceData[];
 }
 
-const COLORS = ["#6366f1", "#06b6d4", "#f59e0b"];
+const COLORS = ["#ffffff", "#a1a1aa", "#52525b"];
 
 export function DeviceChart({ data }: DeviceChartProps) {
   const chartData = data && data.length > 0 ? data : [
@@ -27,11 +27,11 @@ export function DeviceChart({ data }: DeviceChartProps) {
   const getIcon = (name: string) => {
     switch (name.toLowerCase()) {
       case "mobile":
-        return <Smartphone className="h-4 w-4 text-cyan-400" />;
+        return <Smartphone className="h-4 w-4 text-foreground" />;
       case "tablet":
         return <Tablet className="h-4 w-4 text-amber-400" />;
       default:
-        return <Laptop className="h-4 w-4 text-indigo-400" />;
+        return <Laptop className="h-4 w-4 text-foreground" />;
     }
   };
 
@@ -48,7 +48,7 @@ export function DeviceChart({ data }: DeviceChartProps) {
             <Tooltip
               formatter={(value: number, name: string) => [`${value} clicks`, name]}
               contentStyle={{
-                backgroundColor: "rgba(15, 23, 42, 0.95)",
+                backgroundColor: "rgba(10, 10, 10, 0.95)",
                 borderColor: "rgba(255, 255, 255, 0.1)",
                 borderRadius: "0.75rem",
                 fontSize: "12px",

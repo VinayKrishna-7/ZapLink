@@ -96,7 +96,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
                 item.type === "error" &&
                   "border-rose-500/30 bg-rose-950/80 text-rose-100",
                 item.type === "info" &&
-                  "border-indigo-500/30 bg-slate-900/90 text-slate-100"
+                  "border-border bg-card text-card-foreground"
               )}
             >
               <div className="mt-0.5 shrink-0">
@@ -107,7 +107,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
                   <AlertCircle className="h-5 w-5 text-rose-400" />
                 )}
                 {item.type === "info" && (
-                  <Info className="h-5 w-5 text-indigo-400" />
+                  <Info className="h-5 w-5 text-foreground" />
                 )}
               </div>
 

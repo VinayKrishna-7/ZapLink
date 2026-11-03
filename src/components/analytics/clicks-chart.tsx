@@ -38,17 +38,17 @@ interface CustomTooltipProps {
 const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
   if (active && payload && payload.length) {
     return (
-      <div className="rounded-xl border border-border/80 bg-slate-950/90 p-3 shadow-2xl backdrop-blur-md">
-        <p className="text-xs font-semibold text-slate-300 mb-1.5">{formatDate(label)}</p>
+      <div className="rounded-xl border border-border bg-card p-3 shadow-2xl backdrop-blur-md">
+        <p className="text-xs font-semibold text-muted-foreground mb-1.5">{formatDate(label)}</p>
         <div className="space-y-1 text-xs">
-          <p className="flex items-center gap-2 text-indigo-400 font-medium">
-            <span className="h-2 w-2 rounded-full bg-indigo-500" />
-            Clicks: <span className="font-bold text-white">{payload[0]?.value ?? 0}</span>
+          <p className="flex items-center gap-2 text-foreground font-medium">
+            <span className="h-2 w-2 rounded-full bg-foreground" />
+            Clicks: <span className="font-bold text-foreground">{payload[0]?.value ?? 0}</span>
           </p>
           {payload[1] && (
-            <p className="flex items-center gap-2 text-cyan-400 font-medium">
-              <span className="h-2 w-2 rounded-full bg-cyan-500" />
-              Unique Visitors: <span className="font-bold text-white">{payload[1].value}</span>
+            <p className="flex items-center gap-2 text-muted-foreground font-medium">
+              <span className="h-2 w-2 rounded-full bg-muted-foreground" />
+              Unique Visitors: <span className="font-bold text-foreground">{payload[1].value}</span>
             </p>
           )}
         </div>
@@ -125,18 +125,18 @@ export function ClicksChart({
             <AreaChart data={filteredData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <defs>
                 <linearGradient id="clicksGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#6366f1" stopOpacity={0.4} />
-                  <stop offset="95%" stopColor="#6366f1" stopOpacity={0.0} />
+                  <stop offset="5%" stopColor="#ffffff" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#ffffff" stopOpacity={0.0} />
                 </linearGradient>
                 <linearGradient id="visitorsGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#06b6d4" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#06b6d4" stopOpacity={0.0} />
+                  <stop offset="5%" stopColor="#888888" stopOpacity={0.2} />
+                  <stop offset="95%" stopColor="#888888" stopOpacity={0.0} />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(148, 163, 184, 0.1)" vertical={false} />
               <XAxis
                 dataKey="date"
-                stroke="#64748b"
+                stroke="#71717a"
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
@@ -150,7 +150,7 @@ export function ClicksChart({
                 }}
               />
               <YAxis
-                stroke="#64748b"
+                stroke="#71717a"
                 fontSize={11}
                 tickLine={false}
                 axisLine={false}
@@ -160,7 +160,7 @@ export function ClicksChart({
               <Area
                 type="monotone"
                 dataKey="clicks"
-                stroke="#6366f1"
+                stroke="#ffffff"
                 strokeWidth={2.5}
                 fillOpacity={1}
                 fill="url(#clicksGrad)"
@@ -169,7 +169,7 @@ export function ClicksChart({
               <Area
                 type="monotone"
                 dataKey="uniqueVisitors"
-                stroke="#06b6d4"
+                stroke="#888888"
                 strokeWidth={2}
                 fillOpacity={1}
                 fill="url(#visitorsGrad)"

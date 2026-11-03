@@ -45,14 +45,14 @@ export function LandingAnalyticsPreview() {
               value={128492}
               change={18.4}
               icon={MousePointerClick}
-              iconColor="text-indigo-400 bg-indigo-500/10"
+              iconColor="text-foreground bg-muted"
             />
             <KpiCard
               title="Unique Visitors"
               value={42801}
               change={14.2}
               icon={Users}
-              iconColor="text-cyan-400 bg-cyan-500/10"
+              iconColor="text-foreground bg-muted"
             />
             <KpiCard
               title="Active Links"

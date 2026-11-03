@@ -102,7 +102,7 @@ export default function DocsPage() {
                 <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                   Authenticate your API requests by passing your API key as a Bearer token in the <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">Authorization</code> header. You can generate and manage keys in your <Link href="/dashboard" className="text-primary underline">Dashboard</Link>.
                 </p>
-                <div className="rounded-xl border border-border/80 bg-slate-950 p-4 font-mono text-xs text-indigo-300">
+                <div className="rounded-xl border border-border bg-card p-4 font-mono text-xs text-foreground">
                   Authorization: Bearer zl_live_9a8f7c6e5d4c3b2a...
                 </div>
               </section>
@@ -133,8 +133,8 @@ export default function DocsPage() {
                   Creates a short link. Destination URL is required. Custom alias, password protection, and UTM parameters are optional.
                 </p>
 
-                <div className="overflow-hidden rounded-xl border border-border bg-slate-950">
-                  <div className="flex items-center justify-between border-b border-slate-800 bg-slate-900 px-4 py-2 text-xs font-mono text-slate-400">
+                <div className="overflow-hidden rounded-xl border border-border bg-card">
+                  <div className="flex items-center justify-between border-b border-border bg-muted/40 px-4 py-2 text-xs font-mono text-muted-foreground">
                     <span>Request Body</span>
                     <CopyButton
                       text={`curl -X POST https://zaplink-g4ui.onrender.com/api/v1/links \\
@@ -145,7 +145,7 @@ export default function DocsPage() {
                       size="iconSm"
                     />
                   </div>
-                  <pre className="p-4 text-xs font-mono text-cyan-300 overflow-x-auto">
+                  <pre className="p-4 text-xs font-mono text-foreground overflow-x-auto">
 {`{
   "destinationUrl": "https://example.com/products/sale",
   "customAlias": "summer26",      // Optional (3-50 chars)

@@ -209,7 +209,7 @@ export default function DashboardPage() {
             </h3>
             <p className="text-[10px] text-muted-foreground mt-0.5">Real-time aggregate engagement</p>
           </div>
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/15 text-indigo-400">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
             <MousePointerClick className="h-5 w-5" />
           </div>
         </Card>
@@ -241,7 +241,7 @@ export default function DashboardPage() {
             </h3>
             <p className="text-[10px] text-muted-foreground mt-0.5">All created links</p>
           </div>
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-400">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-muted text-foreground">
             <Link2 className="h-5 w-5" />
           </div>
         </Card>
@@ -270,15 +270,15 @@ export default function DashboardPage() {
             <AreaChart data={sparklineData} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
               <defs>
                 <linearGradient id="dashboardSparkGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#6366f1" stopOpacity={0.4} />
-                  <stop offset="95%" stopColor="#6366f1" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#ffffff" stopOpacity={0.25} />
+                  <stop offset="95%" stopColor="#ffffff" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <XAxis dataKey="date" stroke="#94a3b8" fontSize={10} tickLine={false} />
-              <YAxis stroke="#94a3b8" fontSize={10} tickLine={false} allowDecimals={false} />
+              <XAxis dataKey="date" stroke="#71717a" fontSize={10} tickLine={false} />
+              <YAxis stroke="#71717a" fontSize={10} tickLine={false} allowDecimals={false} />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: "rgba(15, 23, 42, 0.95)",
+                  backgroundColor: "rgba(10, 10, 10, 0.95)",
                   borderColor: "rgba(255, 255, 255, 0.1)",
                   borderRadius: "0.5rem",
                   color: "#fff",
@@ -289,7 +289,7 @@ export default function DashboardPage() {
               <Area
                 type="monotone"
                 dataKey="clicks"
-                stroke="#6366f1"
+                stroke="#ffffff"
                 strokeWidth={2}
                 fillOpacity={1}
                 fill="url(#dashboardSparkGradient)"

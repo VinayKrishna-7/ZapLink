@@ -27,7 +27,7 @@ export function GeoList({ data }: GeoListProps) {
     <Card className="p-6">
       <CardHeader className="p-0 pb-4">
         <div className="flex items-center gap-2">
-          <MapPin className="h-4 w-4 text-cyan-400" />
+          <MapPin className="h-4 w-4 text-foreground" />
           <CardTitle className="text-base font-bold">Top Geographies</CardTitle>
         </div>
         <CardDescription className="text-xs">Origin of link visitor traffic</CardDescription>
@@ -52,7 +52,7 @@ export function GeoList({ data }: GeoListProps) {
             {/* Progress bar */}
             <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted/60">
               <div
-                className="h-full rounded-full bg-gradient-to-r from-primary to-cyan-400 transition-all duration-500"
+                className="h-full rounded-full bg-foreground transition-all duration-500"
                 style={{ width: `${Math.min(100, item.percentage)}%` }}
               />
             </div>
